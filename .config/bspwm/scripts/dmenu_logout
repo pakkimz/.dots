@@ -1,0 +1,59 @@
+#!/bin/sh
+
+# https://github.com/aguslr/bspwm-config/blob/master/.config/bspwm/scripts/dmenu-logout
+
+# Function to kill programs
+killprogs() {
+	pkill -x xnots
+	pkill -x redshift
+}
+
+# Logout function
+logout() {
+	# For each opened window
+	bspc query --nodes | while read -r winid; do
+		# Close it
+		xdotool windowkill "$winid"
+	done
+	# Kill programs
+	killprogs
+	# Quit bspwm
+	bspc quit 1
+}
+
+# Load dmenu config
+DMENU='dmenu -i'
+
+# Menu items
+items="logout
+lock
+hibernate
+suspend
+reboot
+poweroff"
+
+# Open menu
+selection=$(printf '%s' "$items" | $DMENU -fn 'Fira Sans-11:normal')
+
+case $selection in
+	logout)
+		logout
+		;;
+	lock)
+		slock
+		;;
+	hibernate)
+		loginctl hibernate
+		;;
+	suspend)
+		loginctl suspend
+		;;
+	reboot)
+		loginctl reboot
+		;;
+	halt|poweroff|shutdown)
+		loginctl poweroff
+		;;
+esac
+
+exit

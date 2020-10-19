@@ -102,9 +102,21 @@ super + bracket{left,right}
 super + alt + bracket{left,right}
 	bspc desktop -f {prev,next}.occupied.local
 
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
 # focus or send to desktop in the given direction
 super + {_,shift + }bracket{left,right}
 	bspc {desktop -f,node -d} {prev,next}.local
+
+# send to desktop and follow
+super + alt + shift + {1-9,0}
+	bspc node -d '^{1-9, 10}' --follow
+
+# send to the next/previous desktop
+super + alt + shift + bracket{left,right}
+	bspc node -d {prev,next}.local --follow
 
 # focus the last node/desktop
 super + {grave,Tab}
@@ -116,9 +128,11 @@ super + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+# rotate node
+super + r
+  bspc node @/ -R 90
+super + shift + r
+  bspc node @/ -R -90
 
 #
 # preselect
@@ -163,18 +177,14 @@ super + {Left,Down,Up,Right}
 # reset gap size
 super + {equal}
 	bspc config -d focused window_gap $(`bspc config -d focused window_gap 0`)
+
 # adjust gap size
 super + {minus,plus}
 	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 2 ))
+
 # adjust gap sized focused desktop window gap with mouse
 super + button{4,5}
 	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 2 ))
-
-# rotate node
-super + r
-  bspc node @/ -R 90
-super + shift + r
-  bspc node @/ -R -90
 
 XF86AudioLowerVolume
 	amixer set Master 5%-

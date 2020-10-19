@@ -45,7 +45,6 @@ set undodir^=~/.vim/tmp/undo//
 set directory=~/.vim/tmp/swap//
 set backupdir=~/.vim/tmp/backup//
 set dictionary=/usr/share/dict/words
-set complete+=k
 set path=.,**																						" :find current and all the children
 set backspace=indent,eol,start													" set backspace to delete normally
 set listchars=tab:→\ ,eol:↲                             " unicode for → = u2192, ↲ = u21b2. set list to display it

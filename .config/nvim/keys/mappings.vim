@@ -109,7 +109,7 @@ cnoremap <A-j> <S-Right>
 nnoremap <silent><F8> :TagbarToggle<CR>
 
 " vim indentline
-nnoremap <silent><F9> :IndentLinesToggle<CR>
+" nnoremap <silent><F9> :IndentLinesToggle<CR>
 
 " delimitmate
 nnoremap <silent><F10> :DelimitMateSwitch<CR>

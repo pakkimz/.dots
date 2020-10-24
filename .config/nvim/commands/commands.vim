@@ -1,5 +1,5 @@
 " move between tags
-runtime! macros/matchit.vim
+" runtime! macros/matchit.vim
 " plugin vim-repeat adding support to related plugins
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 " resize splits when the window is resized

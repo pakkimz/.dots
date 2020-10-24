@@ -38,10 +38,10 @@ Plug 'wellle/targets.vim'																" more powerful ci) ...
 Plug 'tommcdo/vim-exchange'															" exchange word cxiw,cxx,X,cxc
 Plug 'lfilho/cosco.vim'																	" alt+;
 Plug 'AndrewRadev/splitjoin.vim'                        " gS and gJ split and join
+" Plug 'Yggdroot/indentLine'															" need expandtab to make it works
+" Plug 'gregsexton/MatchTag'
 " Plug 'ivalkeen/vim-simpledb'
 " Plug 'ap/vim-css-color'
-" Plug 'gregsexton/matchtag', { 'for': 'html' }
-Plug 'Yggdroot/indentLine'															" need expandtab to make it works
 Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': 'php' }
 call plug#end()
 

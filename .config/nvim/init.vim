@@ -38,7 +38,7 @@ Plug 'lfilho/cosco.vim'																	" alt+;
 " Plug 'ivalkeen/vim-simpledb'
 " Plug 'gregsexton/MatchTag'
 " Plug 'ap/vim-css-color'
-Plug 'justmao945/vim-clang', { 'for' : ['c', 'cpp'] }
+Plug 'justmao945/vim-clang', { 'for': ['c', 'cpp'] }
 Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': 'php' }
 call plug#end()
 

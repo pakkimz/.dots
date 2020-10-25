@@ -42,7 +42,7 @@ Plug 'AndrewRadev/splitjoin.vim'                        " gS and gJ split and jo
 " Plug 'ivalkeen/vim-simpledb'
 " Plug 'gregsexton/MatchTag'
 " Plug 'ap/vim-css-color'
-Plug 'justmao945/vim-clang'
+Plug 'justmao945/vim-clang', { 'for' : ['c', 'cpp'] }
 Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': 'php' }
 call plug#end()
 

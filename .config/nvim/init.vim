@@ -1,7 +1,3 @@
-" set runtimepath^=/.vim runtimepath+=~/.vim/
-" let &packpath=&runtimepath
-" source ~/.vimrc
-
 syntax on
 syntax sync minlines=256
 

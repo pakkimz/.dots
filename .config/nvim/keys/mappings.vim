@@ -95,18 +95,16 @@ vnoremap gp "+p
 
 " moving around in insert & command mode, ctrl+b & ctrl+e move beginning and end
 inoremap <C-b> <Home>
-inoremap <C-e> <End>
+inoremap <C-a> <End>
 inoremap <A-h> <left>
 inoremap <A-l> <right>
 inoremap <A-k> <S-Left>
 inoremap <A-j> <S-Right>
+cnoremap <C-a> <End>
 cnoremap <A-h> <left>
 cnoremap <A-l> <right>
 cnoremap <A-k> <S-Left>
 cnoremap <A-j> <S-Right>
-
-" tagbar
-nnoremap <silent><F8> :TagbarToggle<CR>
 
 " vim indentline
 " nnoremap <silent><F9> :IndentLinesToggle<CR>
@@ -114,13 +112,16 @@ nnoremap <silent><F8> :TagbarToggle<CR>
 " delimitmate
 nnoremap <silent><F10> :DelimitMateSwitch<CR>
 
-" vim syntastic
-nnoremap <silent><F5> :SyntasticToggleMode<CR>
-nnoremap <silent><C-e> :<C-u>call ToggleErrors()<CR>
+" tagbar
+nnoremap <silent><F8> :TagbarToggle<CR>
 
 " vim cosco
 nnoremap <silent> <A-;> :CommaOrSemiColon<CR>
 inoremap <silent> <A-;> <esc>:CommaOrSemiColon<CR>a
+
+" vim syntastic
+nnoremap <silent><F5> :SyntasticToggleMode<CR>
+nnoremap <silent><C-e> :<C-u>call ToggleErrors()<CR>
 
 " nerdtree
 nnoremap gn :e .<CR>

@@ -39,9 +39,10 @@ Plug 'tommcdo/vim-exchange'															" exchange word cxiw,cxx,X,cxc
 Plug 'lfilho/cosco.vim'																	" alt+;
 Plug 'AndrewRadev/splitjoin.vim'                        " gS and gJ split and join
 " Plug 'Yggdroot/indentLine'															" need expandtab to make it works
-" Plug 'gregsexton/MatchTag'
 " Plug 'ivalkeen/vim-simpledb'
+" Plug 'gregsexton/MatchTag'
 " Plug 'ap/vim-css-color'
+Plug 'justmao945/vim-clang'
 Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': 'php' }
 call plug#end()
 

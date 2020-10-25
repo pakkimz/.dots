@@ -28,7 +28,7 @@ set hlsearch
 set confirm																							" ask to save buffer
 set autowrite		                                        " automatically save before commands like :next and :make
 set complete-=i                                         " get rid system include in auto completion
-set shortmess=actI																			" use abbreviation truncate message and disable intro message
+set shortmess=atI																			  " use abbreviation truncate message and disable intro message
 set pumheight=10																				" makes popup menu smaller
 set laststatus=1
 set scrolloff=2
@@ -51,5 +51,5 @@ set listchars=tab:→\ ,eol:↲                             " unicode for → = 
 set hidden																							" moving buffer without saving it
 set wildcharm=<C-z>                                     " make mru and buffer working
 set virtualedit=block																		" block selection in visual mode
-" set completeopt=menuone,noinsert
+set completeopt=menu
 " set omnifunc=syntaxcomplete#Complete

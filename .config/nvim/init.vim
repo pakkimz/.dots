@@ -33,7 +33,7 @@ Plug 'kana/vim-textobj-entire'
 Plug 'wellle/targets.vim'																" more powerful ci) ...
 Plug 'tommcdo/vim-exchange'															" exchange word cxiw,cxx,X,cxc
 Plug 'lfilho/cosco.vim'																	" alt+;
-Plug 'AndrewRadev/splitjoin.vim'                        " gS and gJ split and join
+" Plug 'AndrewRadev/splitjoin.vim'                        " gS and gJ split and join
 " Plug 'Yggdroot/indentLine'															" need expandtab to make it works
 " Plug 'ivalkeen/vim-simpledb'
 " Plug 'gregsexton/MatchTag'

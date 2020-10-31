@@ -51,5 +51,6 @@ set listchars=tab:→\ ,eol:↲                             " unicode for → = 
 set hidden																							" moving buffer without saving it
 set wildcharm=<C-z>                                     " make mru and buffer working
 set virtualedit=block																		" block selection in visual mode
+set whichwrap+=<,>,h,l,[,]
 set completeopt=menu
 " set omnifunc=syntaxcomplete#Complete

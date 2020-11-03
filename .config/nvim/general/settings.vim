@@ -14,7 +14,7 @@ set softtabstop=2
 set shiftwidth=2
 set smarttab																						" tab in insert mode use shiftwidth instead of softtabstop
 set shiftround																					" >> always same as tab size even after inserting space
-set textwidth=80
+set textwidth=106
 set autoindent
 set smartindent
 set breakindent

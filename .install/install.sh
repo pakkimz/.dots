@@ -12,7 +12,7 @@ compton clipmenu cmus rover vifm ranger surf lynx pandoc sdcv mplayer simple-mtp
 words-en man-pages-devel man-pages-posix
 sudo xbps-install -y mpv gimp resynthesizer dia filezilla nomacs scid_vs_pc gucharmap
 sudo xbps-install -y zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps
-sudo xbps-install -y nodejs ctags the_silver_searcher tidy5 perl-Tk
+sudo xbps-install -y nodejs ctags the_silver_searcher tidy5
 sudo xbps-install -y python3-devel python-devel ruby-devel lua-devel python-pip python3-pip
 sudo xbps-install -y apache php-apache php-intl mariadb phpMyAdmin php-mysql xdebug php-gd composer
 sudo xbps-install -y opencv libopencv-python libopencv-python3

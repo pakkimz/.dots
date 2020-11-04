@@ -20,6 +20,7 @@ bspc config focus_by_distance    true
 bspc rule -a Zathura state=tiled
 bspc rule -a Pcmanfm desktop='^4'follow=on
 bspc rule -a Gimp desktop='^5' state=floating follow=on
+bspc rule -a Pencil2D desktop='^5' state=floating follow=on
 bspc rule -a Dia desktop='^5' follow=on
 bspc rule -a Gkamus state=floating
 bspc rule -a XNots state=floating

@@ -16,6 +16,6 @@ sudo xbps-install -y nodejs ctags the_silver_searcher tidy5
 sudo xbps-install -y python3-devel python-devel ruby-devel lua-devel python-pip python3-pip
 sudo xbps-install -y apache php-apache php-intl mariadb phpMyAdmin php-mysql xdebug php-gd composer
 sudo xbps-install -y opencv libopencv-python libopencv-python3
-sudo xbps-install -y SFML SFML-devel cmake
+sudo xbps-install -y SFML SFML-devel cmake gdb
 sudo xbps-install -y openjdk8 openjdk8-jre
 sudo xbps-install -y perl-Tk python-tkinter python3-tkinter

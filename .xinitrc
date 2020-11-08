@@ -2,7 +2,6 @@
 $HOME/.config/polybar/launch.sh &
 sxhkd &
 xnots &
-# picom -CG &
 # devmon &
 # redshift &
 compton &

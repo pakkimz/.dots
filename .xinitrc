@@ -15,4 +15,6 @@ xautolock -time 14 -locker "loginctl suspend" &
 xrdb -I$HOME ~/.Xresources
 xsetroot -cursor_name left_ptr &
 pgrep bspswallow || bspswallow &
+# Configura keyboard repeat speed
+xset r rate 300 30
 exec bspwm

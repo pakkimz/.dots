@@ -8,11 +8,11 @@ super + Return
 
 # program launcher
 super + space
-	dmenu_run -fn 'Fira Sans-11:normal'
+	dmenu_run -fn 'Hack-9:bold'
 
 # program clipmenu
 super + alt + space
-	clipmenu -fn 'Fira Sans-11:normal'
+	clipmenu -fn 'Hack-9:bold'
 
 # program emoji
 super + alt + shift + space

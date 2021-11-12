@@ -1,0 +1,13 @@
+* background	: #ffff88
+* foreground	: #222222
+* bypassWM	: true
+* onTop		: false
+* useMarkup	: 1
+* font		: Permanent Marker
+* size		: 16
+* leftMargin	: 5
+* rightMargin	: 5
+* topMargin	: 5
+* botMargin	: 5
+* indent	: 0
+* roundRadius : 0

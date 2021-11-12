@@ -29,7 +29,8 @@ Xft.rgba: rgb
 ! *cursorBlink: true
 ! *cursorOffTime: 1000
 ! *cursorOnTime: 1000
-*cursorColor: #CDE9D9
+! *cursorColor: #CDE9D9
+*cursorColor: #b0d0f0
 
 ! Cursor color is always the color of the foreground,
 ! *cursorColor: *XtDefaultForeground

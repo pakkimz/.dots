@@ -33,7 +33,7 @@ reboot
 poweroff"
 
 # Open menu
-selection=$(printf '%s' "$items" | $DMENU -fn 'Fira Sans-11:normal')
+selection=$(printf '%s' "$items" | $DMENU -fn 'Hack-9:bold')
 
 case $selection in
 	logout)

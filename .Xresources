@@ -1,0 +1,87 @@
+! Better font rendering
+Xft.autohint: 1
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+
+*termName: xterm-256color
+! Use a truetype font and size.
+! *faceName: DejaVu Sans Mono:style=Book
+! *faceName: DejaVuSansMono Nerd Font Mono:style=Book
+! *faceName: DejaVuSansMono Nerd Font Mono:style=Bold
+! *faceName: RobotoMono Nerd Font Mono:style=Regular
+! *faceName: Cousine Nerd Font Mono:style=Regular
+! *faceName: Hack Nerd Font Mono:style=Regular
+! *faceName: JetBrainsMono Nerd Font Mono:style=Regular
+! *faceName: MesloLGS Nerd Font Mono:style=Regular
+! *faceName: Monaco Nerd Font:style=Regular
+! *faceName: SFMono Nerd Font,SF Mono:style=Regular
+! *faceName: Iosevka Nerd Font Mono:style=Regular
+! *faceName: Fira Sans Mono:style=Regular
+! *faceName: FiraCode Nerd Font Mono:style=Regular
+*faceName: Hack Nerd Font Mono:style=Bold
+*faceSize: 11
+*renderFont: true
+*allowBoldFonts: true
+
+! Blink cursor
+! *cursorBlink: true
+! *cursorOffTime: 1000
+! *cursorOnTime: 1000
+*cursorColor: #CDE9D9
+
+! Cursor color is always the color of the foreground,
+! *cursorColor: *XtDefaultForeground
+
+! cursor shape when over xterm
+*pointerShape: arrow
+! Only select text
+*highlightSelection: true
+! Remove trailing spaces
+*trimSelection: true
+! By default, 1024 lines are saved.
+*VT100.saveLines: 4096
+! The definition of a "word" depends on the character class resource
+*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+! make alt key works
+*metaSendsEscape: true
+
+! Copy paste clipboard & increase and decrease font
+*VT100.Translations: #override \
+  Ctrl Shift <Key> V: insert-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key> C: copy-selection(CLIPBOARD) \n\
+  Ctrl <Key> minus: smaller-vt-font() \n\
+  Ctrl <Key> plus: larger-vt-font() \n\
+  Ctrl <Key> 0: set-vt-font(d) \n\
+  Ctrl Shift <Key> K: scroll-back(1) \n\
+  Ctrl Shift <Key> J: scroll-forw(1)
+
+! https://gist.github.com/Lusori0/40b1eb900495470274d7fc460cc6a5ac
+
+*.foreground:   #C0C0C0
+*.background:   #101010
+! black/dark-gray
+*.color0:       #101010
+*.color8:       #454545
+! red/orange
+*.color1:       #EFA6A2
+*.color9:       #E0AF85
+! green/aquamarine
+*.color2:       #80C990
+*.color10:      #5ACCAF
+! amber/yellow
+*.color3:       #A69460
+*.color11:      #C8C874
+! blue/violet
+*.color4:       #A3B8EF
+*.color12:      #CCACED
+! magenta/rose
+*.color5:       #E6A3DC
+*.color13:      #F2A1C2
+! cyan/azure
+*.color6:       #50CACD
+*.color14:      #74C3E4
+! gray/white
+*.color7:       #808080
+*.color15:			#C0C0C0

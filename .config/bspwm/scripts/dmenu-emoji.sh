@@ -18,7 +18,7 @@ case "$1" in
     fi
     ;;
   "")
-    bash $0 list | dmenu -fn 'Hack-9:bold' -p 'Emoji: ' | bash $0 copy
+    bash $0 list | dmenu -fn 'Hack Sans-9:bold' -p 'Emoji: ' | bash $0 copy
     ;;
 esac
 

@@ -105,8 +105,8 @@ source $ZSH/oh-my-zsh.sh
 alias config='/usr/bin/git --git-dir=$HOME/.dots --work-tree=$HOME'
 alias connect='sudo wpa_supplicant -B -i wlp2s0b1 -c /etc/wpa_supplicant/wpa_supplicant.conf'
 
-source /usr/share/doc/fzf/completion.zsh
-source /usr/share/doc/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
 
 export PATH="/home/house/.local/bin:$PATH"
 export PATH="/home/house/.config/bspwm/scripts/:$PATH"

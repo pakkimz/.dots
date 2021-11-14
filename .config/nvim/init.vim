@@ -1,10 +1,3 @@
-set guifont=Hack\ NF:h10.1
-set guicursor+=a:blinkon0
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
-set guioptions-=L
-
 syntax on
 syntax sync minlines=256
 

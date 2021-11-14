@@ -9,20 +9,10 @@ Xft*rgba: rgb
 *termName: xterm-256color
 ! Use a truetype font and size.
 ! *faceName: DejaVu Sans Mono:style=Book
-! *faceName: DejaVuSansMono Nerd Font Mono:style=Book
 ! *faceName: DejaVuSansMono Nerd Font Mono:style=Bold
-! *faceName: RobotoMono Nerd Font Mono:style=Regular
-! *faceName: Cousine Nerd Font Mono:style=Regular
-! *faceName: Hack Nerd Font Mono:style=Regular
-! *faceName: JetBrainsMono Nerd Font Mono:style=Regular
-! *faceName: MesloLGS Nerd Font Mono:style=Regular
-! *faceName: Monaco Nerd Font:style=Regular
-! *faceName: SFMono Nerd Font,SF Mono:style=Regular
-! *faceName: Iosevka Nerd Font Mono:style=Regular
-! *faceName: Fira Sans Mono:style=Regular
 ! *faceName: FiraCode Nerd Font Mono:style=Regular
 *faceName: Hack Nerd Font Mono:style=Bold
-*faceSize: 11
+*faceSize: 10.7
 *renderFont: true
 *allowBoldFonts: true
 

@@ -1,9 +1,10 @@
 ! Better font rendering
-Xft.autohint: 1
-Xft.antialias: 1
-Xft.hinting: true
-Xft.hintstyle: hintslight
-Xft.rgba: rgb
+Xft*autohint: 1
+Xft*antialias: 1
+Xft*hinting: true
+Xft*hintstyle: hintslight
+Xft*lcdfilter: lcddefault
+Xft*rgba: rgb
 
 *termName: xterm-256color
 ! Use a truetype font and size.

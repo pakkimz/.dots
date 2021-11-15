@@ -20,8 +20,6 @@ Xft*rgba: rgb
 ! *cursorBlink: true
 ! *cursorOffTime: 1000
 ! *cursorOnTime: 1000
-! *cursorColor: #CDE9D9
-*cursorColor: #b0d0f0
 
 ! Cursor color is always the color of the foreground,
 ! *cursorColor: *XtDefaultForeground
@@ -49,31 +47,41 @@ Xft*rgba: rgb
   Ctrl Shift <Key> K: scroll-back(1) \n\
   Ctrl Shift <Key> J: scroll-forw(1)
 
-! https://gist.github.com/Lusori0/40b1eb900495470274d7fc460cc6a5ac
+! https://gist.github.com/mnology/9417744
+#define base00 #0d0c0d
+#define base01 #f2777a
+#define base02 #99cc99
+#define base03 #d2a853
+#define base04 #6699cc
+#define base05 #cc99cc
+#define base06 #66cccc
+#define base07 #ababa4
+#define base08 #515151
+#define base09 #ff5f63
+#define base0A #94ea94
+#define base0B #f0b643
+#define base0C #59a2ea
+#define base0D #ea94ea
+#define base0E #59eaea
+#define base0F #f2f0ec
+*.foreground:   base07
+*.background:   base00
+*.cursorColor:  base07
+*.color0:       base00
+*.color1:       base01
+*.color2:       base02
+*.color3:       base03
+*.color4:       base04
+*.color5:       base05
+*.color6:       base06
+*.color7:       base07
+*.color8:       base08
+*.color9:       base09
+*.color10:      base0A
+*.color11:      base0B
+*.color12:      base0C
+*.color13:      base0D
+*.color14:      base0E
+*.color15: base0F
 
-*.foreground:   #C0C0C0
-*.background:   #101010
-! black/dark-gray
-*.color0:       #101010
-*.color8:       #454545
-! red/orange
-*.color1:       #EFA6A2
-*.color9:       #E0AF85
-! green/aquamarine
-*.color2:       #80C990
-*.color10:      #5ACCAF
-! amber/yellow
-*.color3:       #A69460
-*.color11:      #C8C874
-! blue/violet
-*.color4:       #A3B8EF
-*.color12:      #CCACED
-! magenta/rose
-*.color5:       #E6A3DC
-*.color13:      #F2A1C2
-! cyan/azure
-*.color6:       #50CACD
-*.color14:      #74C3E4
-! gray/white
-*.color7:       #808080
-*.color15:			#C0C0C0
+*cursorColor: #b0d0f0

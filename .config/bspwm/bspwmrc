@@ -24,11 +24,11 @@ bspc rule -a Pencil2D desktop='^5' state=floating follow=on
 bspc rule -a Dia desktop='^5' follow=on
 bspc rule -a Gkamus state=floating
 bspc rule -a XNots state=floating
-# bspc rule -a Chromium desktop='^2'follow=on
-bspc rule -a Firefox desktop='^2'follow=on
 bspc rule -a SeaMonkey desktop='^2'follow=on
 bspc rule -a SeaMonkey:Download state=floating desktop='^3'
 bspc rule -a SeaMonkey:Places state=floating
 # bspc rule -a SeaMonkey:Devtools state=floating
-bspc rule -a "Pale moon" desktop='^2'follow=on
+# bspc rule -a Chromium desktop='^2'follow=on
+# bspc rule -a Firefox desktop='^2'follow=on
+# bspc rule -a "Pale moon" desktop='^2'follow=on
 # bspc rule -a Screenkey manage=off

@@ -14,7 +14,7 @@ Xft*rgba: rgb
 *faceName: Hack Nerd Font Mono:style=Bold
 *faceSize: 10.7
 *renderFont: true
-*allowBoldFonts: true
+*allowBoldFonts: false
 
 ! Blink cursor
 ! *cursorBlink: true

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# https://github.com/Jack12816/colorpicker
+colorpicker --short --one-shot --preview | xsel -b

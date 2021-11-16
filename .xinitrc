@@ -4,7 +4,7 @@ sxhkd &
 xnots &
 devmon &
 # redshift &
-compton &
+picom &
 nm-applet &
 clipmenud &
 unclutter &

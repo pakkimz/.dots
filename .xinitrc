@@ -8,7 +8,7 @@ picom &
 nm-applet &
 clipmenud &
 unclutter &
-nitrogen --restore &
+~/.fehbg &
 xss-lock slock &
 # xautolock -time 10 -locker slock &
 xautolock -time 14 -locker "loginctl suspend" &

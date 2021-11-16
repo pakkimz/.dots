@@ -1,14 +1,14 @@
 #!/bin/sh
 $HOME/.config/polybar/launch.sh &
+hsetroot -cover $HOME/.local/share/backgrounds/d7c6116.png &
+picom &
 sxhkd &
 xnots &
 devmon &
 # redshift &
-picom &
 nm-applet &
 clipmenud &
 unclutter &
-~/.fehbg &
 xss-lock slock &
 # xautolock -time 10 -locker slock &
 xautolock -time 14 -locker "loginctl suspend" &

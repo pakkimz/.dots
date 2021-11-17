@@ -1,4 +1,16 @@
-colorscheme gummybears
+" colorscheme gummybears
+
+if has('termguicolors')
+  set termguicolors
+  let g:jellybeans_overrides = {
+  \    'background': { 'ctermbg': 'none', '256ctermbg': 'none', 'guibg': 'none' },
+  \    'VertSplit': { 'guifg': '202020', 'guibg': 'none' },
+  \    'NonText': { 'guifg': '000000' },
+  \    'StatusLine': { 'guifg': 'ffffff', 'guibg': '151515' },
+  \    'StatusLineNC': { 'guifg': 'A69460', 'guibg': '151515', 'ctermfg': 'none', 'ctermbg': '234' },
+  \}
+  colorscheme jellybeans
+endif
 
 let mapleader = ' '
 let g:move_map_keys = 0                                 " disable other keys vim-move and just use my mapping

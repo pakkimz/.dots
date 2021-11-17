@@ -102,12 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# alias for sdcv, usage: def "your word"
-function def() {
-	sdcv -n --utf8-output --color "$@" 2>&1 | \
-	fold --width=$(tput cols) | \
-	less --quit-if-one-screen -RX
-}
 alias config='/usr/bin/git --git-dir=$HOME/.dots --work-tree=$HOME'
 alias connect='sudo wpa_supplicant -B -i wlp2s0b1 -c /etc/wpa_supplicant/wpa_supplicant.conf'
 

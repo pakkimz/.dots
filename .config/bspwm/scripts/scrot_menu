@@ -1,0 +1,27 @@
+#!/bin/sh
+
+IMG_PATH=$HOME/.scrots
+EDIT=nomacs
+TIME=3000 #Miliseconds notification should remain visible
+DMENU='dmenu -i'
+
+items="quick_fullscreen
+delayed_fullscreen
+section
+edit_fullscreen"
+
+selection=$(printf '%s' "$items" | $DMENU -fn 'Hack-9:bold')
+
+cd $IMG_PATH
+case $selection in
+	quick_fullscreen)
+		scrot -d 1 '%Y-%m-%d-@%H-%M-%S-scrot.png';;
+	delayed_fullscreen)
+		scrot -d 4 '%Y-%m-%d-@%H-%M-%S-scrot.png';;
+	section)
+		scrot -s '%Y-%m-%d-@%H-%M-%S-scrot.png';;
+	edit_fullscreen)
+		scrot -d 1 '%Y-%m-%d-@%H-%M-%S-scrot.png' -e "$EDIT \$f";;
+esac
+
+exit

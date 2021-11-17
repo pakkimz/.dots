@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# describe word with sdcv alias
+sdcv -n --utf8-output --color "$@" 2>&1 | \
+fold --width=$(tput cols) | \
+less --quit-if-one-screen -RX

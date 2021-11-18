@@ -32,9 +32,9 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = Hack Nerd Font Mono:pixelsize=12:antialias=true;2
-; font-4 = FontAwesome:style:Regular:pixelsize=12;antialias=true;2
+font-4 = FontAwesome:style:Regular:pixelsize=12;antialias=true;2
 
-modules-left = date temperature xkeyboard
+modules-left = date temperature xkeyboard mpd
 modules-center = bspwm
 modules-right = alsa backlight memory cpu filesystem powermenu
 
@@ -269,6 +269,34 @@ menu-6-0 = logout
 menu-6-0-exec = bspc quit
 menu-6-1 = cancel
 menu-6-1-exec = menu-open-0
+
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+interval = 2
+
+icon-prev = 
+icon-seekb = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+icon-seekf = 
+
+icon-random = 
+icon-repeat = 
+
+toggle-on-foreground = #e60053
+toggle-off-foreground = #66
+
+format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next> <icon-repeat> <icon-random> <label-time>
+
+label-song = %artist% - %title%
+label-offline = ---
+
+label-time-foreground = ${colors.foreground-alt}
 
 [global/wm]
 margin-top = 0

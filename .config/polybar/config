@@ -213,6 +213,32 @@ ramp-2-foreground = ${colors.foreground-alt}
 ramp-3-foreground = ${colors.foreground-alt}
 ramp-4-foreground = ${colors.foreground-alt}
 
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+interval = 2
+
+icon-prev = 
+icon-seekb = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+icon-seekf = 
+
+icon-random = 
+icon-repeat = 
+
+format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next> <icon-repeat> <icon-random> <label-time>
+label-song = %artist% - %title%
+label-offline = ---
+
+toggle-on-foreground = #e60053
+toggle-off-foreground = #66
+label-time-foreground = ${colors.foreground-alt}
+
 [module/powermenu]
 type = custom/menu
 
@@ -269,34 +295,6 @@ menu-6-0 = logout
 menu-6-0-exec = bspc quit
 menu-6-1 = cancel
 menu-6-1-exec = menu-open-0
-
-[module/mpd]
-type = internal/mpd
-
-host = 127.0.0.1
-port = 6600
-interval = 2
-
-icon-prev = 
-icon-seekb = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-icon-seekf = 
-
-icon-random = 
-icon-repeat = 
-
-toggle-on-foreground = #e60053
-toggle-off-foreground = #66
-
-format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next> <icon-repeat> <icon-random> <label-time>
-
-label-song = %artist% - %title%
-label-offline = ---
-
-label-time-foreground = ${colors.foreground-alt}
 
 [global/wm]
 margin-top = 0

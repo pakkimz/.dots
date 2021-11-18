@@ -34,9 +34,9 @@ font-2 = siji:pixelsize=10;1
 font-3 = Hack Nerd Font Mono:pixelsize=12:antialias=true;2
 font-4 = FontAwesome:style:Regular:pixelsize=12;antialias=true;2
 
-modules-left = date temperature xkeyboard mpd
+modules-left = date xkeyboard mpd
 modules-center = bspwm
-modules-right = alsa backlight memory cpu filesystem powermenu
+modules-right = alsa backlight memory cpu filesystem temperature powermenu
 
 tray-position = left
 tray-padding = 2
@@ -97,7 +97,7 @@ hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon4/temp1_input
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = ${colors.brown}
+; format-underline = ${colors.brown}
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 

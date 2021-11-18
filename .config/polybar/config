@@ -187,7 +187,7 @@ ramp-volume-1-foreground = ${colors.foreground-alt}
 ramp-volume-2-foreground = ${colors.foreground-alt}
 
 format-volume-underline = ${colors.brown}
-format-volume = <ramp-volume>  <label-volume>
+format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
 
 [module/backlight]
@@ -203,7 +203,7 @@ ramp-2 = 🌓
 ramp-3 = 🌒
 ramp-4 = 🌑
 
-format = <ramp>  <label>
+format = <ramp> <label>
 format-underline = ${colors.brown}
 label = %percentage%%
 

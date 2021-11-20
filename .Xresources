@@ -10,9 +10,8 @@ Xft*rgba: rgb
 ! Use a truetype font and size.
 ! *faceName: DejaVu Sans Mono:style=Book
 ! *faceName: DejaVuSansMono Nerd Font Mono:style=Bold
-! *faceName: FiraCode Nerd Font Mono:style=Regular
 *faceName: Hack Nerd Font Mono:style=Bold
-*faceSize: 10.7
+*faceSize: 10.1
 *renderFont: true
 *allowBoldFonts: false
 

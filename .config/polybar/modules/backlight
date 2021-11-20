@@ -1,0 +1,24 @@
+[module/backlight]
+type = internal/backlight
+
+card = radeon_bl0
+use-actual-brightness = true
+enable-scroll = true
+
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+format = <ramp> <label>
+format-underline = ${colors.brown}
+label = %percentage%%
+
+ramp-0-foreground = ${colors.foreground-alt}
+ramp-1-foreground = ${colors.foreground-alt}
+ramp-2-foreground = ${colors.foreground-alt}
+ramp-3-foreground = ${colors.foreground-alt}
+ramp-4-foreground = ${colors.foreground-alt}
+
+; vim:ft=dosini

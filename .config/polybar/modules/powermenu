@@ -1,0 +1,58 @@
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.secondary}
+label-close =  cancel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = poweroff
+menu-0-0-exec = menu-open-1
+menu-0-1 = reboot
+menu-0-1-exec = menu-open-2
+menu-0-2 = suspend
+menu-0-2-exec = menu-open-3
+menu-0-3 = hibernate
+menu-0-3-exec = menu-open-4
+menu-0-4 = lock
+menu-0-4-exec = menu-open-5
+menu-0-5 = logout
+menu-0-5-exec = menu-open-6
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = poweroff
+menu-1-1-exec = loginctl poweroff
+
+menu-2-0 = reboot
+menu-2-0-exec = loginctl reboot
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+menu-3-0 = suspend
+menu-3-0-exec = loginctl suspend
+menu-3-1 = cancel
+menu-3-1-exec = menu-open-0
+
+menu-4-0 = hibernate
+menu-4-0-exec = loginctl hibernate
+menu-4-1 = cancel
+menu-4-1-exec = menu-open-0
+
+menu-5-0 = lock
+menu-5-0-exec = slock
+menu-5-1 = cancel
+menu-5-1-exec = menu-open-0
+
+menu-6-0 = logout
+menu-6-0-exec = bspc quit
+menu-6-1 = cancel
+menu-6-1-exec = menu-open-0
+
+; vim:ft=dosini

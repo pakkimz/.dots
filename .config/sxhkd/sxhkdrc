@@ -20,7 +20,7 @@ super + alt + shift + space
 
 # program pcman
 super + e
-	pcmanfm
+	xterm -e ranger
 
 # program SeaMonkey
 super + w

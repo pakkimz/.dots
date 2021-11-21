@@ -11,7 +11,7 @@ Xft*rgba: rgb
 ! *faceName: DejaVu Sans Mono:style=Book
 ! *faceName: DejaVuSansMono Nerd Font Mono:style=Bold
 *faceName: Hack Nerd Font Mono:style=Bold
-*faceSize: 10.1
+*faceSize: 10
 *renderFont: true
 *allowBoldFonts: false
 

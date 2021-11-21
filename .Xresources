@@ -1,43 +1,56 @@
+!https://gitlab.com/protesilaos/dotfiles/-/blob/master/xorg/.Xresources
+
 ! Better font rendering
-Xft*autohint: 1
 Xft*antialias: 1
+Xft*rgba: rgb
+Xft*autohint: 0
 Xft*hinting: true
 Xft*hintstyle: hintslight
 Xft*lcdfilter: lcddefault
-Xft*rgba: rgb
 
-*termName: xterm-256color
+! Basic settings
+xterm*termName: xterm-256color
+xterm*locale: true
+xterm*utf8: 1
+xterm*utf8Fonts: always
+xterm*dynamicColors: true
+
 ! Use a truetype font and size.
 ! *faceName: DejaVu Sans Mono:style=Book
 ! *faceName: DejaVuSansMono Nerd Font Mono:style=Bold
-*faceName: Hack Nerd Font Mono:style=Bold
-*faceSize: 10
-*renderFont: true
-*allowBoldFonts: false
+xterm*faceName: Hack Nerd Font Mono:style=Bold
+xterm*faceSize: 10
+xterm*renderFont: true
+xterm*allowBoldFonts: false
 
 ! Blink cursor
 ! *cursorBlink: true
 ! *cursorOffTime: 1000
 ! *cursorOnTime: 1000
-
-! Cursor color is always the color of the foreground,
 ! *cursorColor: *XtDefaultForeground
+! *cursorColor: reverse
+xterm*cursorColor: #b0d0f0
 
 ! cursor shape when over xterm
-*pointerShape: arrow
-! Only select text
-*highlightSelection: true
+xterm*pointerShape: arrow
+
+! Text highlighting
+xterm*highlightReverse: true
+xterm*highlightSelection: true
+xterm*highlightColor: XtDefaultForeground
+xterm*highlightTextColor: XtDefaultBackground
+
 ! Remove trailing spaces
-*trimSelection: true
+xterm*trimSelection: true
 ! By default, 1024 lines are saved.
-*VT100.saveLines: 4096
+xterm.saveLines: 4096
 ! The definition of a "word" depends on the character class resource
-*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 ! make alt key works
-*metaSendsEscape: true
+xterm*metaSendsEscape: true
 
 ! Copy paste clipboard & increase and decrease font
-*VT100.Translations: #override \
+xterm*Translations: #override \
   Ctrl Shift <Key> V: insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key> C: copy-selection(CLIPBOARD) \n\
   Ctrl <Key> minus: smaller-vt-font() \n\
@@ -65,7 +78,6 @@ Xft*rgba: rgb
 #define base0F #f2f0ec
 *.foreground:   base07
 *.background:   base00
-*.cursorColor:  base07
 *.color0:       base00
 *.color1:       base01
 *.color2:       base02
@@ -81,6 +93,4 @@ Xft*rgba: rgb
 *.color12:      base0C
 *.color13:      base0D
 *.color14:      base0E
-*.color15: base0F
-
-*cursorColor: #b0d0f0
+*.color15:      base0F

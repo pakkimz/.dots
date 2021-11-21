@@ -22,6 +22,8 @@ xterm*faceName: Hack Nerd Font Mono:style=Bold
 xterm*faceSize: 10
 xterm*renderFont: true
 xterm*allowBoldFonts: false
+xterm*boldColors: false
+xterm*scaleHeight: 1.0
 
 ! Blink cursor
 ! *cursorBlink: true

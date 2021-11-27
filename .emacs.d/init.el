@@ -70,33 +70,6 @@
 ;; Forces the messages to 0, and kills the *Messages* buffer - thus disabling it on startup.
 (setq-default message-log-max nil)
 (kill-buffer "*Messages*")
-;; ----------------------------------------------------------------------------------
-;; Packages
-;; ----------------------------------------------------------------------------------
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
-
-(setq use-package-always-ensure t)
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-(eval-when-compile (require 'use-package))
-
-;; Autocompletion
-(use-package company
-  :config
-  (setq company-idle-delay 0)             ;; no delay
-  (setq company-minimum-prefix-length 2)  ;; suggestion after two character
-  (setq company-selection-wrap-around t)  ;; cycle through
-  :init
-  (add-hook 'after-init-hook 'global-company-mode))
-(provide 'init-company)
-(with-eval-after-load 'company
-  (define-key company-active-map (kbd "C-e") #'company-abort)
-  (define-key company-active-map (kbd "C-h") #'backward-delete-char)
-  (define-key company-active-map (kbd "C-y") #'company-complete-selection)
-  (define-key company-active-map (kbd "C-w") 'evil-delete-backward-word))
 
 ;; Auto close pair
 (electric-pair-mode 1)
@@ -116,6 +89,33 @@
   (electric-indent-local-mode -1))
 (add-hook 'html-mode-hook 'remove-electric-indent-mode)
 
+;; ----------------------------------------------------------------------------------
+;; Packages
+;; ----------------------------------------------------------------------------------
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
+(setq use-package-always-ensure t)
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(eval-when-compile (require 'use-package))
+
+;; Autocompletion
+(use-package auto-complete
+             :config
+             (global-auto-complete-mode t)
+             (setq ac-auto-show-menu 0.0)    ;; don't delay
+             (setq ac-use-quick-help nil)    ;; disable tooltip
+             (setq ac-use-menu-map t)
+             (define-key ac-menu-map "\C-n" 'ac-next)
+             (define-key ac-menu-map "\C-p" 'ac-previous)
+             (define-key ac-menu-map "\C-y" 'ac-complete)
+             (define-key ac-menu-map "\t" 'ac-complete)
+             (define-key ac-menu-map "\r" 'nil)
+             (define-key ac-menu-map "\C-e" 'ac-stop))
+
 ;; Recent file or mru
 (use-package recentf
              :config
@@ -123,6 +123,7 @@
              (setq recentf-max-menu-items 25))
 
 ;; Ivy
+(use-package counsel)
 (use-package ivy
              :diminish (ivy-mode . "")
              :init (ivy-mode 1) ; globally at startup
@@ -220,32 +221,32 @@
              (load-theme 'jbeans t))
 
 ;; Web mode
-(use-package company-web)
-(use-package php-mode)
-(use-package ac-html-bootstrap)
 (use-package web-mode
-             :diminish "🌎"
              :mode
-             (("\\.phtml\\'" . web-mode)
-              ("\\.tpl\\.php\\'" . web-mode)
-              ("\\.jsp\\'" . web-mode)
-              ("\\.as[cp]x\\'" . web-mode)
-              ("\\.erb\\'" . web-mode)
-              ("\\.mustache\\'" . web-mode)
-              ("\\.djhtml\\'" . web-mode)
-              ("\\.jst.ejs\\'" . web-mode)
-              ("\\.html?\\'" . web-mode))
-             :init
-             (setq web-mode-enable-block-face t)
-             (setq web-mode-enable-comment-keywords t)
-             (setq web-mode-enable-current-element-highlight t)
-             (setq web-mode-enable-current-column-highlight t)
-             (setq web-mode-script-padding 2)
-             (setq web-mode-style-padding 2)
-             (setq web-mode-comment-style 2)
+             (("\\.php\\'" . web-mode)
+              ("\\.js\\'" . web-mode)
+              ("\\.css\\'" . web-mode)
+              ("\\.html?\\'" . web-mode)
+              ("\\.ejs$\\'" . web-mode))
+             :config
+             (setq web-mode-markup-indent-offset 2)
+             (setq web-mode-css-indent-offset 2)
              (setq web-mode-code-indent-offset 2)
-             (setq web-mode-markup-indent-offset 2))
+             (setq web-mode-enable-auto-closing t)
+             (setq web-mode-engines-alist
+                   '(("php"    . "\\.html\\'")
+                     ("blade"  . "\\.blade\\."))))
 
+;; Flycheck active after command M-x flycheck-mode / global-flycheck-mode
+(use-package flycheck
+             :init
+             ; (add-hook 'after-init-hook #'global-flycheck-mode)  ;; auto turn on globally
+             :config
+             (setq-default flycheck-temp-prefix ".flycheck")
+             (setq flymake-no-changes-timeout nil)
+             (setq flymake-start-syntax-check-on-newline nil)
+             (setq flycheck-check-syntax-automatically '(save mode-enabled)))
+(flycheck-add-mode 'javascript-eslint 'web-mode)     ;; use eslint with web-mode
 ;; ----------------------------------------------------------------------------------
 ;; Functions
 ;; ----------------------------------------------------------------------------------
@@ -366,7 +367,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(tern-auto-complete lsp-mode counsel use-package)))
+ '(package-selected-packages
+   '(flycheck web-mode jbeans-theme org-bullets neotree evil-surround evil-commentary evil-collection evil undo-fu counsel auto-complete use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

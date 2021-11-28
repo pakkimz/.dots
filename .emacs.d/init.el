@@ -225,9 +225,7 @@
 ;; Web mode
 (use-package web-mode
              :mode
-             (("\\.php\\'" . web-mode)
-              ("\\.js\\'" . web-mode)
-              ("\\.css\\'" . web-mode)
+             (("\\.css\\'" . web-mode)
               ("\\.html?\\'" . web-mode)
               ("\\.ejs$\\'" . web-mode))
              :config
@@ -238,6 +236,16 @@
              (setq web-mode-engines-alist
                    '(("php"    . "\\.html\\'")
                      ("blade"  . "\\.blade\\."))))
+;; Js2 mode
+(use-package js2-mode
+             :init
+             (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+             ;; Better imenu
+             (add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
+             :config
+             ;; Disable syntax checker js2-mode
+             (setq js2-mode-show-parse-errors nil)
+             (setq js2-mode-show-strict-warnings nil))
 
 ;; Flycheck active after command M-x flycheck-mode / global-flycheck-mode
 (use-package flycheck
@@ -249,6 +257,22 @@
              (setq flymake-start-syntax-check-on-newline nil)
              (setq flycheck-check-syntax-automatically '(save mode-enabled)))
 (flycheck-add-mode 'javascript-eslint 'web-mode)     ;; use eslint with web-mode
+(flycheck-add-mode 'javascript-eslint 'js2-mode)     ;; use eslint with web-mode
+
+;; Tern javascript completion
+(use-package tern
+             :init
+             ;; Set web-mode & js2 to tern-mode
+             (add-hook 'web-mode-hook (lambda () (tern-mode t)))
+             (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+             :config
+             ;; Disable tern argument
+             (setq-default tern-update-argument-hints-async t))
+(use-package tern-auto-complete)
+(eval-after-load 'tern
+                 '(progn
+                    (require 'tern-auto-complete)
+                    (tern-ac-setup)))
 ;; ----------------------------------------------------------------------------------
 ;; Functions
 ;; ----------------------------------------------------------------------------------

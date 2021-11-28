@@ -70,25 +70,6 @@
 ;; Forces the messages to 0, and kills the *Messages* buffer - thus disabling it on startup.
 (setq-default message-log-max nil)
 (kill-buffer "*Messages*")
-
-;; Auto close pair
-(electric-pair-mode 1)
-;; Disable auto-indent
-; (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
-;; Auto close single-quote and backtic
-(push '(?\' . ?\') electric-pair-pairs)
-(push '(?\` . ?\`) electric-pair-pairs)
-; (push '(?\' . ?\') electric-pair-text-pairs)    ;; in comment and text
-; (push '(?\` . ?\`) electric-pair-text-pairs)
-;; Disable pair in <
-(setq electric-pair-inhibit-predicate
-      `(lambda (c)
-         (if (char-equal c ?\<) t (,electric-pair-inhibit-predicate c))))
-;; Disable indent on html
-(defun remove-electric-indent-mode ()
-  (electric-indent-local-mode -1))
-(add-hook 'html-mode-hook 'remove-electric-indent-mode)
-
 ;; ----------------------------------------------------------------------------------
 ;; Packages
 ;; ----------------------------------------------------------------------------------
@@ -101,6 +82,27 @@
   (package-refresh-contents)
   (package-install 'use-package))
 (eval-when-compile (require 'use-package))
+
+;; Auto close pair
+(use-package electric
+             :init
+             (electric-pair-mode 1)
+             :config
+             ;; Disable auto-indent
+             ; (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
+             ;; Auto close single-quote and backtic
+             (push '(?\' . ?\') electric-pair-pairs)
+             (push '(?\` . ?\`) electric-pair-pairs)
+             ; (push '(?\' . ?\') electric-pair-text-pairs)    ;; in comment and text
+             ; (push '(?\` . ?\`) electric-pair-text-pairs)
+             ;; Disable pair in <
+             (setq electric-pair-inhibit-predicate
+                   `(lambda (c)
+                      (if (char-equal c ?\<) t (,electric-pair-inhibit-predicate c)))))
+;; Disable electric indent on html
+(defun remove-electric-indent-mode ()
+  (electric-indent-local-mode -1))
+(add-hook 'html-mode-hook 'remove-electric-indent-mode)
 
 ;; Autocompletion
 (use-package auto-complete
@@ -362,6 +364,7 @@
         (neotree-dir project-dir))
       (when filepath
         (neotree-find filepath)))))
+;; ----------------------------------------------------------------------------------
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

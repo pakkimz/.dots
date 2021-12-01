@@ -108,5 +108,6 @@ alias connect='sudo wpa_supplicant -B -i wlp2s0b1 -c /etc/wpa_supplicant/wpa_sup
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 
+export EDITOR=vim
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.config/bspwm/scripts/:$PATH"

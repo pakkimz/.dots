@@ -158,9 +158,20 @@ super + ctrl + shift + space
 # move/resize
 #
 
-# expand a window by moving one of its side outward
+# better resize windows
 super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+	{bspc node @parent/second -z left -20 0; \
+	bspc node @parent/first -z right -20 0, \
+	bspc node @parent/second -z top 0 +20; \
+	bspc node @parent/first -z bottom 0 +20, \
+	bspc node @parent/first -z bottom 0 -20; \
+	bspc node @parent/second -z top 0 -20, \
+	bspc node @parent/first -z right +20 0; \
+	bspc node @parent/second -z left +20 0}
+
+# expand a window by moving one of its side outward
+# super + alt + {h,j,k,l}
+# 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}

@@ -9,8 +9,8 @@
                     :width 'normal)
 
 ;; Transparency
-(set-frame-parameter (selected-frame) 'alpha '(95 95))
-(add-to-list 'default-frame-alist '(alpha 95 95))
+(set-frame-parameter (selected-frame) 'alpha '(90 90))
+(add-to-list 'default-frame-alist '(alpha 90 90))
 
 (setq delete-by-moving-to-trash t)              ;; move to trash
 (setq-default frame-title-format '("%f"))       ;; title

@@ -52,10 +52,6 @@ keymap("n", "]s", "a<space><esc>h", opts)
 keymap("n", "<C-l>", ":bnext<CR>", opts)
 keymap("n", "<BS>", ":bprevious<CR>", opts)
 
--- Navigate tabs
-keymap("n", "<M-l>", ":tabnext<CR>", opts)
-keymap("n", "<M-h>", ":tabprevious<CR>", opts)
-
 -- Increase value resize split
 keymap("n", "<C-w>+", ":resize +5<CR>", opts)
 keymap("n", "<C-w>-", ":resize -5<CR>", opts)

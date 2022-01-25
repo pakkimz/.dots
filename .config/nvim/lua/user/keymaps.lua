@@ -27,6 +27,19 @@ keymap("n", "Q", "<Nop>", opts)
 keymap("n", "+", "<Nop>", opts)
 keymap("v", "+", "<Nop>", opts)
 
+-- Paste multiple lines multiple times with simple ppppp
+keymap("v", "y", "y`]", opts)
+keymap("v", "p", "p`]", opts)
+keymap("n", "p", "p`]", opts)
+
+-- Stay in indent mode
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
+
+-- Easier horizontal scrolling
+keymap("n", "zl", "zL", opts)
+keymap("n", "zh", "zH", opts)
+ 
 -- Map C-j as C-n in command mode
 keymap("c", "<C-j>", "<C-n>", opts)
 keymap("c", "<C-k>", "<C-p>", opts)
@@ -43,23 +56,6 @@ keymap("n", "<BS>", ":bprevious<CR>", opts)
 keymap("n", "<M-l>", ":tabnext<CR>", opts)
 keymap("n", "<M-h>", ":tabprevious<CR>", opts)
 
--- MRU 
-keymap("n", "<leader>b", ":b <C-z>", opts)
-keymap("n", "<leader>m", ":ME <C-z>", opts)
-
--- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
-
--- Easier horizontal scrolling
-keymap("n", "zl", "zL", opts)
-keymap("n", "zh", "zH", opts)
- 
--- Paste multiple lines multiple times with simple ppppp
-keymap("v", "y", "y`]", opts)
-keymap("v", "p", "p`]", opts)
-keymap("n", "p", "p`]", opts)
-
 -- Increase value resize split
 keymap("n", "<C-w>+", ":resize +5<CR>", opts)
 keymap("n", "<C-w>-", ":resize -5<CR>", opts)
@@ -72,6 +68,24 @@ keymap("v", "<C-space>", "<Esc>gV", opts)
 keymap("x", "<C-space>", "<Esc>", opts)
 keymap("c", "<C-space>", "<C-c>", opts)
 keymap("n", "<C-space>", "<Esc>:noh<CR>", opts)
+
+-- Moving around
+keymap("i", "<C-a>", "<Home>", opts)
+keymap("i", "<C-e>", "<End>", opts)
+keymap("i", "<C-f>", "<right>", opts)
+keymap("i", "<C-b>", "<left>", opts)
+keymap("c", "<C-a>", "<Home>", opts)
+keymap("c", "<C-e>", "<End>", opts)
+keymap("c", "<C-f>", "<right>", opts)
+keymap("c", "<C-b>", "<left>", opts)
+keymap("i", "<M-l>", "<right>", opts)
+keymap("i", "<M-h>", "<left>", opts)
+keymap("i", "<M-k>", "<S-Left>", opts)
+keymap("i", "<M-j>", "<S-Right>", opts)
+keymap("c", "<M-l>", "<right>", opts)
+keymap("c", "<M-h>", "<left>", opts)
+keymap("c", "<M-k>", "<S-Left>", opts)
+keymap("c", "<M-j>", "<S-Right>", opts)
 
 -- Play with leader
 keymap("n", "<leader>w", ":w!<CR>", opts)
@@ -91,23 +105,9 @@ keymap("n", "<leader>c", ":cd<Space>", opts)
 keymap("n", "<leader>C", ":cd %:p:h<CR>:pwd<CR>", opts)
 keymap("n", "<leader>O", ":%bd!|e#|bd!#<CR>", opts)
 
--- Moving around
-keymap("i", "<C-a>", "<Home>", opts)
-keymap("i", "<C-e>", "<End>", opts)
-keymap("i", "<C-f>", "<right>", opts)
-keymap("i", "<C-b>", "<left>", opts)
-keymap("c", "<C-a>", "<Home>", opts)
-keymap("c", "<C-e>", "<End>", opts)
-keymap("c", "<C-f>", "<right>", opts)
-keymap("c", "<C-b>", "<left>", opts)
-keymap("i", "<M-l>", "<right>", opts)
-keymap("i", "<M-h>", "<left>", opts)
-keymap("i", "<M-k>", "<S-Left>", opts)
-keymap("i", "<M-j>", "<S-Right>", opts)
-keymap("c", "<M-l>", "<right>", opts)
-keymap("c", "<M-h>", "<left>", opts)
-keymap("c", "<M-k>", "<S-Left>", opts)
-keymap("c", "<M-j>", "<S-Right>", opts)
+-- MRU 
+keymap("n", "<leader>b", ":b <C-z>", opts)
+keymap("n", "<leader>m", ":ME <C-z>", opts)
 
 -- Nvimtree
 keymap("n", "<C-n>", ":NvimTreeToggle<cr>", opts)

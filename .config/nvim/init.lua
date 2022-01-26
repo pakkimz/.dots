@@ -1,3 +1,4 @@
+require "user.commands"
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
@@ -9,6 +10,3 @@ require "user.move"
 require "user.trim"
 require "user.nvim-tree"
 require "user.treesitter"
-
--- Vimscript
-require "user.commands"

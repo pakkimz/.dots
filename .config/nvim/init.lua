@@ -8,3 +8,6 @@ require "user.comment"
 require "user.move"
 require "user.nvim-tree"
 require "user.treesitter"
+
+-- Vimscript
+require "user.commands"

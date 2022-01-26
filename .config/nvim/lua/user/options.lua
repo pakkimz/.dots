@@ -61,5 +61,8 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
+vim.opt.shortmess:append "atIc"
+
 vim.cmd "set wildcharm=<C-z>"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
+

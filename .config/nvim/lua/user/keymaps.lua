@@ -32,6 +32,11 @@ keymap("v", "y", "y`]", opts)
 keymap("v", "p", "p`]", opts)
 keymap("n", "p", "p`]", opts)
 
+-- Prevent selecting and pasting from overwriting what's in the clipboard
+keymap("n", "x", "\"_x", opts)
+keymap("n", "X", "\"_x", opts)
+keymap("n", "<Del>", "\"_x", opts)
+
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
@@ -51,6 +56,10 @@ keymap("n", "]s", "a<space><esc>h", opts)
 -- Navigate buffers
 keymap("n", "<C-l>", ":bnext<CR>", opts)
 keymap("n", "<BS>", ":bprevious<CR>", opts)
+
+-- Easier scrolling when wrap
+keymap("n", "j", "v:count ? 'j' : 'gj'", { noremap = true, expr = true })
+keymap("n", "k", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
 
 -- Increase value resize split
 keymap("n", "<C-w>+", ":resize +5<CR>", opts)

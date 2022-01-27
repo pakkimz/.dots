@@ -67,12 +67,6 @@ keymap("n", "k", "v:count ? 'k' : 'gk'", exprs)
 keymap("c", "<c-n>", "wildmenumode() ? '<c-n>' : '<down>'", exprs)
 keymap("c", "<c-p>", "wildmenumode() ? '<c-p>' : '<up>'", exprs)
 
--- Make search use normal regex
-keymap("n", "/", "/\\v", opts)
-keymap("v", "/", "/\\v", opts)
-keymap("n", "?", "?\\v", opts)
-keymap("v", "?", "?\\v", opts)
-
 -- Increase value resize split
 keymap("n", "<C-w>+", ":resize +5<CR>", optst)
 keymap("n", "<C-w>-", ":resize -5<CR>", optst)

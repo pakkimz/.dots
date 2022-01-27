@@ -48,7 +48,7 @@ return packer.startup(function(use)
 	use "fedepujol/move.nvim"			-- Easily move line
 	use "numToStr/Comment.nvim" 	-- Easily comment stuff
   use "cappyzawa/trim.nvim"     -- Trims trailing whitespace
-  use 'norcalli/nvim-colorizer.lua'   -- Color Higlighter
+  use 'norcalli/nvim-colorizer.lua'   -- Color higlighter
 
 	-- Nvim-tree
 	use 'kyazdani42/nvim-web-devicons'
@@ -86,8 +86,8 @@ return packer.startup(function(use)
   use 'kana/vim-textobj-user'
   use 'kana/vim-textobj-entire'
   use 'christoomey/vim-titlecase'
-  use 'tommcdo/vim-exchange'              -- exchange word cxiw,cxx,X,cxc
-  use 'lfilho/cosco.vim'                  -- alt+;
+  use 'tommcdo/vim-exchange'              -- Exchange word cxiw,cxx,X,cxc
+  use 'lfilho/cosco.vim'                  -- Alt+;
 	use 'tpope/vim-eunuch'
 	use 'tpope/vim-unimpaired'
   use 'tpope/vim-surround'

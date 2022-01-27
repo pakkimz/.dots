@@ -37,4 +37,6 @@
 ;; Ctrl-alt i (complation at point) to see what available completion in cursor
 ;; npm i -g intelephense -- backend for php
 
+;; flymake-show-diagnostics-buffer commands to show what error
+
 (provide 'init-lsp-mode)

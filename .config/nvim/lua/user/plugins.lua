@@ -78,9 +78,19 @@ return packer.startup(function(use)
 
 	-- Vimscript plugins
 	use 'pakkimz/jellybeans.vim'
+  use 'nelstrom/vim-visual-star-search'
 	use 'romainl/vim-tinyMRU'
+  use 'vim-scripts/loremipsum'
+  use 'vim-scripts/ReplaceWithRegister'
+  use 'kana/vim-textobj-user'
+  use 'kana/vim-textobj-entire'
+  use 'christoomey/vim-titlecase'
+  use 'tommcdo/vim-exchange'              -- exchange word cxiw,cxx,X,cxc
+  use 'lfilho/cosco.vim'                  -- alt+;
 	use 'tpope/vim-eunuch'
 	use 'tpope/vim-unimpaired'
+  use 'tpope/vim-surround'
+  use 'tpope/vim-repeat'                  -- Put this on the last
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

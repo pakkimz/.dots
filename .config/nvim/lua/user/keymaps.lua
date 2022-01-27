@@ -1,4 +1,5 @@
 local opts = { noremap = true, silent = false }
+local optst = { noremap = true, silent = true }
 local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
@@ -28,9 +29,9 @@ keymap("n", "+", "<Nop>", opts)
 keymap("v", "+", "<Nop>", opts)
 
 -- Paste multiple lines multiple times with simple ppppp
-keymap("v", "y", "y`]", opts)
-keymap("v", "p", "p`]", opts)
-keymap("n", "p", "p`]", opts)
+keymap("v", "y", "y`]", optst)
+keymap("v", "p", "p`]", optst)
+keymap("n", "p", "p`]", optst)
 
 -- Prevent selecting and pasting from overwriting what's in the clipboard
 keymap("n", "x", "\"_x", opts)
@@ -44,7 +45,7 @@ keymap("v", ">", ">gv", opts)
 -- Easier horizontal scrolling
 keymap("n", "zl", "zL", opts)
 keymap("n", "zh", "zH", opts)
- 
+
 -- Map C-j as C-n in command mode
 keymap("c", "<C-j>", "<C-n>", opts)
 keymap("c", "<C-k>", "<C-p>", opts)
@@ -62,10 +63,10 @@ keymap("n", "j", "v:count ? 'j' : 'gj'", { noremap = true, expr = true })
 keymap("n", "k", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
 
 -- Increase value resize split
-keymap("n", "<C-w>+", ":resize +5<CR>", opts)
-keymap("n", "<C-w>-", ":resize -5<CR>", opts)
-keymap("n", "<C-w>>", ":vertical:resize +5<CR>", opts)
-keymap("n", "<C-w><", ":vertical:resize -5<CR>", opts)
+keymap("n", "<C-w>+", ":resize +5<CR>", optst)
+keymap("n", "<C-w>-", ":resize -5<CR>", optst)
+keymap("n", "<C-w>>", ":vertical:resize +5<CR>", optst)
+keymap("n", "<C-w><", ":vertical:resize -5<CR>", optst)
 
 -- Esc stuffs
 keymap("i", "<C-space>", "<Esc>`^", opts)
@@ -110,9 +111,13 @@ keymap("n", "<leader>c", ":cd<Space>", opts)
 keymap("n", "<leader>C", ":cd %:p:h<CR>:pwd<CR>", opts)
 keymap("n", "<leader>O", ":%bd!|e#|bd!#<CR>", opts)
 
--- MRU 
+-- MRU
 keymap("n", "<leader>b", ":b <C-z>", opts)
 keymap("n", "<leader>m", ":ME <C-z>", opts)
+
+-- Cosco
+keymap("n", "<M-;>", ":CommaOrSemiColon<CR>", optst)
+keymap("i", "<M-;>", "<esc>:CommaOrSemiColon<CR>a", optst)
 
 -- Nvimtree
 keymap("n", "<C-n>", ":NvimTreeToggle<cr>", opts)

@@ -1,7 +1,6 @@
 local opts = { noremap = true, silent = false }
 local optst = { noremap = true, silent = true }
-local exprs = { noremap = false, expr = true }
-local term_opts = { silent = true }
+local exprs = { expr = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- Remap space as leader key

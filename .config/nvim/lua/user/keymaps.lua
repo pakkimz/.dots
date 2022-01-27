@@ -120,4 +120,4 @@ keymap("n", "<M-;>", ":CommaOrSemiColon<CR>", optst)
 keymap("i", "<M-;>", "<esc>:CommaOrSemiColon<CR>a", optst)
 
 -- Nvimtree
-keymap("n", "<C-n>", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<C-n>", ":NvimTreeToggle<cr>", optst)

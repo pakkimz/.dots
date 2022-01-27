@@ -48,6 +48,7 @@ return packer.startup(function(use)
 	use "fedepujol/move.nvim"			-- Easily move line
 	use "numToStr/Comment.nvim" 	-- Easily comment stuff
   use "cappyzawa/trim.nvim"     -- Trims trailing whitespace
+  use 'norcalli/nvim-colorizer.lua'   -- Color Higlighter
 
 	-- Nvim-tree
 	use 'kyazdani42/nvim-web-devicons'

@@ -80,6 +80,12 @@ keymap("x", "<C-space>", "<Esc>", opts)
 keymap("c", "<C-space>", "<C-c>", opts)
 keymap("n", "<C-space>", "<Esc>:noh<CR>", opts)
 
+-- Make search use normal regex
+keymap("n", "/", "/\\v", opts)
+keymap("v", "/", "/\\v", opts)
+keymap("n", "?", "?\\v", opts)
+keymap("v", "?", "?\\v", opts)
+
 -- Moving around
 keymap("i", "<C-a>", "<Home>", opts)
 keymap("i", "<C-e>", "<End>", opts)

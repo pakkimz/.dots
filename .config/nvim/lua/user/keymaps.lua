@@ -1,5 +1,6 @@
 local opts = { noremap = true, silent = false }
 local optst = { noremap = true, silent = true }
+local exprs = { noremap = false, expr = true }
 local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
@@ -59,8 +60,12 @@ keymap("n", "<C-l>", ":bnext<CR>", opts)
 keymap("n", "<BS>", ":bprevious<CR>", opts)
 
 -- Easier scrolling when wrap
-keymap("n", "j", "v:count ? 'j' : 'gj'", { noremap = true, expr = true })
-keymap("n", "k", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
+keymap("n", "j", "v:count ? 'j' : 'gj'", exprs)
+keymap("n", "k", "v:count ? 'k' : 'gk'", exprs)
+
+-- Recall the command-line whose beginning matches the current command-line
+keymap("c", "<c-n>", "wildmenumode() ? '<c-n>' : '<down>'", exprs)
+keymap("c", "<c-p>", "wildmenumode() ? '<c-p>' : '<up>'", exprs)
 
 -- Increase value resize split
 keymap("n", "<C-w>+", ":resize +5<CR>", optst)

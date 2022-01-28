@@ -114,6 +114,10 @@ keymap("n", "<leader>c", ":cd<Space>", opts)
 keymap("n", "<leader>C", ":cd %:p:h<CR>:pwd<CR>", opts)
 keymap("n", "<leader>O", ":%bd!|e#|bd!#<CR>", opts)
 
+-- Ag
+keymap("n", "<leader>a", ":Ag!<space>", opts)
+keymap("n", "<leader>A", ":AgFile!<space>", opts)
+
 -- MRU
 keymap("n", "<leader>f", ":e <C-z>", opts)
 keymap("n", "<leader>b", ":b <C-z>", opts)

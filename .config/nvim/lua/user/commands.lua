@@ -5,6 +5,11 @@ vim.g.omni_sql_default_compl_type = 'syntax'
 vim.g.tagbar_sort = 0
 vim.g.tagbar_width = 30
 
+-- Ag
+-- vim.g.ag_highlight = 1
+vim.g.ag_mapping_message = 0
+vim.g.ag_working_path_mode = "r"
+
 -- Vim-repeat adding support to related plugins
 vim.cmd [[
   silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)

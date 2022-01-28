@@ -93,6 +93,7 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'                  -- Put this on the last
 
+  use 'rking/ag.vim'
   use {'majutsushi/tagbar', opt = true, cmd = {'TagbarToggle'}}
   use {'ivalkeen/vim-simpledb', ft = 'sql'}
 

@@ -1,6 +1,6 @@
-require "user.commands"
 require "user.options"
 require "user.plugins"
+require "user.commands"
 require "user.keymaps"
 require "user.colorscheme"
 require "user.treesitter"

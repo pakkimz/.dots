@@ -123,5 +123,8 @@ keymap("n", "<leader>m", ":ME <C-z>", opts)
 keymap("n", "<M-;>", ":CommaOrSemiColon<CR>", optst)
 keymap("i", "<M-;>", "<esc>:CommaOrSemiColon<CR>a", optst)
 
+-- Tagbar
+keymap("n", "<F8>", ":TagbarToggle<CR>", optst)
+
 -- Nvimtree
 keymap("n", "<C-n>", ":NvimTreeToggle<cr>", optst)

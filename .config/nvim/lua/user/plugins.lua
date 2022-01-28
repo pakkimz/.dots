@@ -93,6 +93,8 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'                  -- Put this on the last
 
+  use {'majutsushi/tagbar', opt = true, cmd = {'TagbarToggle'}}
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

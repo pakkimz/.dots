@@ -1,0 +1,53 @@
+colors:
+  # Default colors
+  primary:
+    background: "#0d0c0d"
+    foreground: "#ababa4"
+
+  # Normal colors
+  normal:
+    black: "#3B4252"
+    red: "#f2777a"
+    green: "#99cc99"
+    yellow: "#d2a853"
+    blue: "#6699cc"
+    magenta: "#cc99cc"
+    cyan: "#66cccc"
+    white: "#ababa4"
+
+  # Bright colors
+  bright:
+    black: "#515151"
+    red: "#ff5f63"
+    green: "#94ea94"
+    yellow: "#f0b643"
+    blue: "#59a2ea"
+    magenta: "#ea94ea"
+    cyan: "#59eaea"
+    white: "#f2f0ec"
+
+background_opacity: 0.9
+
+font:
+  normal:
+    family: "Hack Nerd Font Mono"
+    style: Bold
+
+  # Point size
+  size: 7
+
+selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+  save_to_clipboard: true
+
+live_config_reload: true
+
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: N, mods: Control, action: SpawnNewInstance }
+  - { key: K, mods: Control|Shift, action: ScrollLineUp }
+  - { key: J, mods: Control|Shift, action: ScrollLineDown }

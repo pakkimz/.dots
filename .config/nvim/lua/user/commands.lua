@@ -1,3 +1,10 @@
+-- SQL omni complete
+vim.g.omni_sql_default_compl_type = 'syntax'
+
+-- Tagbar
+vim.g.tagbar_sort = 0
+vim.g.tagbar_width = 30
+
 -- Treat for every no name file as text file
 vim.cmd [[
   augroup noname

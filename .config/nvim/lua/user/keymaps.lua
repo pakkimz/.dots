@@ -105,7 +105,6 @@ keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>Q", ":qa!<CR>", opts)
 keymap("n", "<leader>r", ":bd<CR>", opts)
 keymap("n", "<leader>R", ":bw!<CR>", opts)
-keymap("n", "<leader>f", ":find<space>", opts)
 keymap("n", "<leader>s", ":saveas<space>", opts)
 keymap("n", "<leader>t", ":tabnew<space>", opts)
 keymap("n", "<leader>T", ":tabnew<CR>", opts)
@@ -116,6 +115,7 @@ keymap("n", "<leader>C", ":cd %:p:h<CR>:pwd<CR>", opts)
 keymap("n", "<leader>O", ":%bd!|e#|bd!#<CR>", opts)
 
 -- MRU
+keymap("n", "<leader>f", ":e <C-z>", opts)
 keymap("n", "<leader>b", ":b <C-z>", opts)
 keymap("n", "<leader>m", ":ME <C-z>", opts)
 

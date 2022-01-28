@@ -5,6 +5,16 @@ vim.g.omni_sql_default_compl_type = 'syntax'
 vim.g.tagbar_sort = 0
 vim.g.tagbar_width = 30
 
+-- Vim-repeat adding support to related plugins
+vim.cmd [[
+  silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
+]]
+
+-- Disable autocomment
+vim.cmd [[
+  autocmd BufWinEnter * :set formatoptions-=cro
+]]
+
 -- Treat for every no name file as text file
 vim.cmd [[
   augroup noname

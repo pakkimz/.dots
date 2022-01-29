@@ -10,14 +10,14 @@ vim.g.tagbar_width = 30
 vim.g.ag_mapping_message = 0
 vim.g.ag_working_path_mode = "r"
 
--- Alacritty fix transparent issue
--- vim.cmd [[
---   hi! Normal ctermbg=NONE guibg=NONE
--- ]]
-
 -- Vim-repeat adding support to related plugins
 vim.cmd [[
   silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
+]]
+
+-- Resize splits when the window is resized
+vim.cmd [[
+  autocmd VimResized * :wincmd =
 ]]
 
 -- Disable autocomment
@@ -46,4 +46,9 @@ vim.cmd [[
 --     autocmd BufLeave * if !&diff | let b:winview = winsaveview() | endif
 --     autocmd BufEnter * if exists('b:winview') && !&diff | call winrestview(b:winview) | unlet! b:winview | endif
 --   augroup end
+-- ]]
+
+-- Alacritty fix transparent issue
+-- vim.cmd [[
+--   hi! Normal ctermbg=NONE guibg=NONE
 -- ]]

@@ -100,7 +100,6 @@ keymap("c", "<M-j>", "<S-Right>", opts)
 -- Play with leader
 keymap("n", "<leader>w", ":w!<CR>", opts)
 keymap("n", "<leader>W", ":wa!<CR>", opts)
-keymap("n", "<leader>x", ":x<CR>", opts)
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>Q", ":qa!<CR>", opts)
 keymap("n", "<leader>r", ":bd<CR>", opts)
@@ -113,6 +112,10 @@ keymap("n", "<leader>E", ":e <C-R>=expand('%:p:h') . '/' <CR>", opts)
 keymap("n", "<leader>c", ":cd<Space>", opts)
 keymap("n", "<leader>C", ":cd %:p:h<CR>:pwd<CR>", opts)
 keymap("n", "<leader>O", ":%bd!|e#|bd!#<CR>", opts)
+
+-- Buffkill
+keymap("n", "<leader>x", ":BD<CR>", opts)
+keymap("n", "<leader>X", ":BW<CR>", opts)
 
 -- Ag
 keymap("n", "<leader>a", ":Ag!<space>", opts)

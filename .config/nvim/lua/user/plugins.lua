@@ -45,8 +45,8 @@ return packer.startup(function(use)
 	use "nvim-lua/popup.nvim"			-- An implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim"		-- Useful lua functions used ny lots of plugins
 	use "windwp/nvim-autopairs" 	-- Autopairs, integrates with both cmp and treesitter
+  use "numToStr/Comment.nvim" 	-- Easily comment stuff
 	use "fedepujol/move.nvim"			-- Easily move line
-	use "numToStr/Comment.nvim" 	-- Easily comment stuff
   use "cappyzawa/trim.nvim"     -- Trims trailing whitespace
   use 'norcalli/nvim-colorizer.lua'   -- Color higlighter
 
@@ -59,8 +59,8 @@ return packer.startup(function(use)
 	use "hrsh7th/cmp-buffer"			-- Buffer completions
 	use "hrsh7th/cmp-path"				-- Path completions
 	use "hrsh7th/cmp-cmdline"			-- Cmdline completions
+  use "hrsh7th/cmp-nvim-lsp"
 	use "saadparwaiz1/cmp_luasnip"-- Snippet completions
-	use "hrsh7th/cmp-nvim-lsp"
 
 	-- Snippets
 	use "L3MON4D3/LuaSnip"							-- Snippet engine

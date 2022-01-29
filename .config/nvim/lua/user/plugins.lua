@@ -94,7 +94,6 @@ return packer.startup(function(use)
   use 'tpope/vim-repeat'                  -- Put this on the last
 
   use 'rking/ag.vim'
-  use 'qpkorr/vim-bufkill'                -- Delete buffer without losing split
   use {'majutsushi/tagbar', opt = true, cmd = {'TagbarToggle'}}
   use {'ivalkeen/vim-simpledb', ft = 'sql'}
 

@@ -102,8 +102,6 @@ keymap("n", "<leader>w", ":w!<CR>", opts)
 keymap("n", "<leader>W", ":wa!<CR>", opts)
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>Q", ":qa!<CR>", opts)
-keymap("n", "<leader>r", ":bd<CR>", opts)
-keymap("n", "<leader>R", ":bw!<CR>", opts)
 keymap("n", "<leader>s", ":saveas<space>", opts)
 keymap("n", "<leader>t", ":tabnew<space>", opts)
 keymap("n", "<leader>T", ":tabnew<CR>", opts)
@@ -111,20 +109,19 @@ keymap("n", "<leader>e", ":e<space>", opts)
 keymap("n", "<leader>E", ":e <C-R>=expand('%:p:h') . '/' <CR>", opts)
 keymap("n", "<leader>c", ":cd<Space>", opts)
 keymap("n", "<leader>C", ":cd %:p:h<CR>:pwd<CR>", opts)
-keymap("n", "<leader>O", ":%bd!|e#|bd!#<CR>", opts)
-
--- Buffkill
-keymap("n", "<C-w>x", ":BD<CR>", opts)
-keymap("n", "<C-w>X", ":BW<CR>", opts)
+keymap("n", "<leader>r", ":bd<CR>", opts)
+keymap("n", "<leader>R", ":bw!<CR>", opts)
+keymap("n", "<leader>x", ":bp|bd #<CR>", opts)            -- Delete buffer without closing split
+keymap("n", "<leader>O", ":%bd!|e#|bd!#<CR>", opts)       -- Leave only one buffer
 
 -- Ag
-keymap("n", "<C-x>a", ":Ag!<space>", opts)
-keymap("n", "<C-x>A", ":AgFile!<space>", opts)
+keymap("n", "<leader>a", ":Ag!<space>", opts)
+keymap("n", "<leader>A", ":AgFile!<space>", opts)
 
 -- MRU
-keymap("n", "<C-x><C-f>", ":e <C-z>", opts)
-keymap("n", "<C-x><C-b>", ":b <C-z>", opts)
-keymap("n", "<C-x><C-r>", ":ME <C-z>", opts)
+keymap("n", "<leader>f", ":e <C-z>", opts)
+keymap("n", "<leader>b", ":b <C-z>", opts)
+keymap("n", "<leader>m", ":ME <C-z>", opts)
 
 -- Cosco
 keymap("n", "<M-;>", ":CommaOrSemiColon<CR>", optst)

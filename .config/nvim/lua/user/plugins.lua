@@ -88,6 +88,7 @@ return packer.startup(function(use)
   use 'christoomey/vim-titlecase'
   use 'tommcdo/vim-exchange'              -- Exchange word cxiw,cxx,X,cxc
   use 'lfilho/cosco.vim'                  -- Alt+;
+  use 'wellle/targets.vim'
 	use 'tpope/vim-eunuch'
 	use 'tpope/vim-unimpaired'
   use 'tpope/vim-surround'

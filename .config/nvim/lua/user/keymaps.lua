@@ -114,17 +114,17 @@ keymap("n", "<leader>C", ":cd %:p:h<CR>:pwd<CR>", opts)
 keymap("n", "<leader>O", ":%bd!|e#|bd!#<CR>", opts)
 
 -- Buffkill
-keymap("n", "<leader>x", ":BD<CR>", opts)
-keymap("n", "<leader>X", ":BW<CR>", opts)
+keymap("n", "<C-w>x", ":BD<CR>", opts)
+keymap("n", "<C-w>X", ":BW<CR>", opts)
 
 -- Ag
-keymap("n", "<leader>a", ":Ag!<space>", opts)
-keymap("n", "<leader>A", ":AgFile!<space>", opts)
+keymap("n", "<C-x>a", ":Ag!<space>", opts)
+keymap("n", "<C-x>A", ":AgFile!<space>", opts)
 
 -- MRU
-keymap("n", "<leader>f", ":e <C-z>", opts)
-keymap("n", "<leader>b", ":b <C-z>", opts)
-keymap("n", "<leader>m", ":ME <C-z>", opts)
+keymap("n", "<C-x><C-f>", ":e <C-z>", opts)
+keymap("n", "<C-x><C-b>", ":b <C-z>", opts)
+keymap("n", "<C-x><C-r>", ":ME <C-z>", opts)
 
 -- Cosco
 keymap("n", "<M-;>", ":CommaOrSemiColon<CR>", optst)

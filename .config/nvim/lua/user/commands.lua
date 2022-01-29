@@ -11,9 +11,9 @@ vim.g.ag_mapping_message = 0
 vim.g.ag_working_path_mode = "r"
 
 -- Alacritty fix transparent issue
-vim.cmd [[
-  hi! Normal ctermbg=NONE guibg=NONE
-]]
+-- vim.cmd [[
+--   hi! Normal ctermbg=NONE guibg=NONE
+-- ]]
 
 -- Vim-repeat adding support to related plugins
 vim.cmd [[

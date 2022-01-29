@@ -36,7 +36,7 @@ xterm*limitFontsets: 5
 xterm*cursorColor: #b0d0f0
 
 ! cursor shape when over xterm
-xterm*pointerShape: arrow
+xterm*pointerShape: left_ptr
 
 ! Text highlighting
 xterm*highlightReverse: true

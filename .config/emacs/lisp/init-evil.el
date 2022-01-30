@@ -69,6 +69,7 @@
                       (define-key evil-normal-state-map "\C-l" 'next-buffer)
                       (define-key evil-normal-state-map "\C-h" 'previous-buffer)
                       (define-key evil-normal-state-map (kbd "g.") 'goto-last-change)
+                      (define-key evil-normal-state-map (kbd "<leader>d") 'flymake-show-diagnostics-buffer)
                       (define-key evil-normal-state-map (kbd "<leader>O") 'only-current-buffer)
                       (define-key evil-normal-state-map (kbd "<leader>w") 'save-buffer)
                       (define-key evil-normal-state-map (kbd "<leader>r") 'kill-this-buffer)

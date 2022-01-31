@@ -47,8 +47,3 @@ vim.cmd [[
 --     autocmd BufEnter * if exists('b:winview') && !&diff | call winrestview(b:winview) | unlet! b:winview | endif
 --   augroup end
 -- ]]
-
--- Alacritty fix transparent issue
--- vim.cmd [[
---   hi! Normal ctermbg=NONE guibg=NONE
--- ]]

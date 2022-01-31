@@ -59,13 +59,14 @@
 (evil-unimpaired-mode)
 
 (with-eval-after-load 'evil-maps
+                      (define-key evil-normal-state-map "\C-n" 'neotree-toggle)
                       (define-key evil-normal-state-map "Y" 'djoyner/copy-to-end-of-line)
                       (define-key evil-visual-state-map (kbd ">") 'djoyner/evil-shift-right-visual)
                       (define-key evil-visual-state-map (kbd "<") 'djoyner/evil-shift-left-visual)
                       (define-key evil-insert-state-map (kbd "\C-h") 'delete-backward-char)                 ;; one character
                       ; (define-key evil-insert-state-map (kbd "\C-h") 'backspace-whitespace-to-tab-stop)     ;; according tab space
-                      (define-key evil-normal-state-map "\C-j" 'drag-stuff-down)
-                      (define-key evil-normal-state-map "\C-k" 'drag-stuff-up)
+                      (define-key evil-normal-state-map "\M-j" 'drag-stuff-down)
+                      (define-key evil-normal-state-map "\M-k" 'drag-stuff-up)
                       (define-key evil-normal-state-map "\C-l" 'next-buffer)
                       (define-key evil-normal-state-map "\C-h" 'previous-buffer)
                       (define-key evil-normal-state-map (kbd "g.") 'goto-last-change)
@@ -91,7 +92,6 @@
              :config
              (setq neo-theme 'icon)
              (setq-default neo-show-hidden-files t)
-             (global-set-key [f1] 'neotree-toggle)
              (global-set-key [f2] 'my-neotree-project-dir-toggle)      ;; find directory
              :init
              (add-hook 'neo-after-create-hook

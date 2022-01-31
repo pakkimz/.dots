@@ -45,6 +45,7 @@ local options = {
 	backup = true,
 	writebackup = true,
 	backupcopy = yes,
+  backupdir = "~/.local/share/nvim/backup//",
 	dictionary = "/usr/share/dict/words",
 	completeopt = { "menuone", "noinsert" },
   numberwidth = 2,

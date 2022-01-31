@@ -45,7 +45,6 @@ local options = {
 	backup = true,
 	writebackup = true,
 	backupcopy = yes,
-  backupdir = "~/.local/share/nvim/backup//",
 	dictionary = "/usr/share/dict/words",
 	completeopt = { "menuone", "noinsert" },
   numberwidth = 2,
@@ -64,3 +63,4 @@ vim.opt.shortmess:append "atIc"
 
 vim.cmd "set wildcharm=<C-z>"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
+vim.cmd "set backupdir=~/.local/share/nvim/backup//"

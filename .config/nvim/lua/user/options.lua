@@ -51,7 +51,6 @@ local options = {
   signcolumn = "yes",
 	hidden = true,
 	belloff = all,
-	ttyfast = true,
 	lazyredraw = true,
 }
 

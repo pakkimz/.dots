@@ -28,6 +28,8 @@ keymap("n", "q", "<Nop>", opts)
 keymap("n", "Q", "<Nop>", opts)
 keymap("n", "+", "<Nop>", opts)
 keymap("v", "+", "<Nop>", opts)
+keymap("n", "-", "<Nop>", opts)
+keymap("v", "-", "<Nop>", opts)
 
 -- Paste multiple lines multiple times with simple ppppp
 keymap("v", "y", "y`]", optst)

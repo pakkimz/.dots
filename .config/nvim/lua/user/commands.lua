@@ -15,6 +15,11 @@ vim.cmd [[
   silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 ]]
 
+-- Save when losing focus
+vim.cmd [[
+  autocmd FocusLost * :silent! wall
+]]
+
 -- Resize splits when the window is resized
 vim.cmd [[
   autocmd VimResized * :wincmd =

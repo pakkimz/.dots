@@ -14,6 +14,7 @@ vim.g.maplocalleader = " "
 -- visual_mode = "v",
 -- visual_block_mode = "x",
 -- term_mode = "t",
+-- operator_pending = "o",
 -- command_mode = "c",
 
 -- '., gi, gv, go
@@ -76,6 +77,7 @@ keymap("n", "<C-w><", ":vertical:resize -5<CR>", optst)
 keymap("i", "<C-space>", "<Esc>`^", opts)
 keymap("v", "<C-space>", "<Esc>gV", opts)
 keymap("x", "<C-space>", "<Esc>", opts)
+keymap("o", "<C-space>", "<Esc>", opts)
 keymap("c", "<C-space>", "<C-c>", opts)
 keymap("n", "<C-space>", "<Esc>:noh<CR>", opts)
 

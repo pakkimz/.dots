@@ -17,12 +17,6 @@ vim.g.maplocalleader = " "
 -- operator_pending = "o",
 -- command_mode = "c",
 
--- '., gi, gv, go
-keymap("n", "g.", "`.", opts)
-
--- Re select pasted text
-keymap("n", "gV", "`[v`]", opts)
-
 -- Say Nop for q and Q and +
 keymap("n", "q", "<Nop>", opts)
 keymap("n", "Q", "<Nop>", opts)
@@ -30,6 +24,12 @@ keymap("n", "+", "<Nop>", opts)
 keymap("v", "+", "<Nop>", opts)
 keymap("n", "-", "<Nop>", opts)
 keymap("v", "-", "<Nop>", opts)
+
+-- '., gi, gv, go
+keymap("n", "g.", "`.", opts)
+
+-- Re select pasted text
+keymap("n", "gV", "`[v`]", opts)
 
 -- Paste multiple lines multiple times with simple ppppp
 keymap("v", "y", "y`]", optst)

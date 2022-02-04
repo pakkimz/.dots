@@ -33,7 +33,6 @@
 (require 'init-evil)
 (require 'init-functions)
 (require 'init-electric)
-(require 'init-php-mode)
 (require 'init-company)
 (require 'init-lsp-mode)
 (require 'init-ivy)

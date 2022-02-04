@@ -16,7 +16,7 @@
              (lsp-modeline-diagnostics-enable nil)
              (lsp-signature-auto-activate nil)
              (lsp-signature-render-documentation nil)
-             (lsp-completion-show-detail t)
+             (lsp-completion-show-detail nil)
              (lsp-completion-show-kind t)
 
              :hook
@@ -25,10 +25,13 @@
              (c-mode . lsp-deferred)
              (c++-mode . lsp-deferred)
              (html-mode . lsp-deferred)
-             (php-mode . lsp-deferred)
              (lsp-mode . company-mode)
 
              )
+
+(use-package php-mode
+             :hook
+             (php-mode . lsp-deferred))
 
 (use-package python-mode
              :hook

@@ -16,6 +16,7 @@ vim.g.maplocalleader = " "
 -- term_mode = "t",
 -- operator_pending = "o",
 -- command_mode = "c",
+-- select_mode = "s",
 
 -- Say Nop for q and Q and +
 keymap("n", "q", "<Nop>", opts)
@@ -35,6 +36,10 @@ keymap("n", "gV", "`[v`]", opts)
 keymap("v", "y", "y`]", optst)
 keymap("v", "p", "p`]", optst)
 keymap("n", "p", "p`]", optst)
+
+-- Map p as printable p in select-mode (used in snippet)
+keymap("s", "p", "p", opts)
+keymap("s", "y", "y", opts)
 
 -- Prevent selecting and pasting from overwriting what's in the clipboard
 keymap("n", "x", "\"_x", opts)

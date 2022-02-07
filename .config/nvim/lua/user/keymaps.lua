@@ -54,9 +54,9 @@ keymap("v", ">", ">gv", opts)
 keymap("n", "zl", "zL", opts)
 keymap("n", "zh", "zH", opts)
 
--- Map C-j as C-n in command mode
-keymap("c", "<C-j>", "<C-n>", opts)
-keymap("c", "<C-k>", "<C-p>", opts)
+-- Map C-j as <tab> in command mode (see in :verbose cmap <tab>)
+keymap("c", "<C-j>", "<Cmd>call v:lua.cmp.utils.keymap.set_map(25)<CR>", opts)
+keymap("c", "<C-k>", "<Cmd>call v:lua.cmp.utils.keymap.set_map(16)<CR>", opts)
 
 -- Add one space
 keymap("n", "[s", "i<space><esc>l", opts)

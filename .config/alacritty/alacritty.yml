@@ -30,8 +30,6 @@ colors:
    text: CellBackground
    cursor: "#b0d0f0"
 
-background_opacity: 0.9
-
 font:
   normal:
     family: "Hack Nerd Font Mono"
@@ -42,6 +40,7 @@ window:
   padding:
     x: 2
     y: 2
+  opacity: 0.9
 
 selection:
   semantic_escape_chars: ',│`|:"'' ()[]{}<>'

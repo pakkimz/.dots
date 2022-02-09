@@ -119,18 +119,23 @@ cmp.setup {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-  documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  },
   experimental = {
     ghost_text = false,
     native_menu = false,
   },
+
+  -- Select first candidate
   completion = {
     completeopt = "menuone, noinsert"
   },
 
-  -- disable cmp inside comment
+  -- Disable documentation
+  documentation = false,
+  -- documentation = {
+  --   border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+  -- },
+
+  -- Disable cmp inside comment
   enabled = function()
     local in_prompt = vim.api.nvim_buf_get_option(0, 'buftype') == 'prompt'
     if in_prompt then  -- this will disable cmp in the Telescope window (taken from the default config)

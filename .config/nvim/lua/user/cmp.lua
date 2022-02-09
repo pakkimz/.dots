@@ -126,6 +126,9 @@ cmp.setup {
     ghost_text = false,
     native_menu = false,
   },
+  completion = {
+    completeopt = "menuone, noinsert"
+  },
 
   -- disable cmp inside comment
   enabled = function()

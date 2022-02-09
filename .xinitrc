@@ -16,5 +16,5 @@ xrdb -I$HOME ~/.Xresources
 xsetroot -cursor_name left_ptr &
 pgrep bspswallow || bspswallow &
 # configure keyboard repeat speed
-xset r rate 350 35
+xset r rate 400 40
 exec bspwm

@@ -124,15 +124,15 @@ cmp.setup {
     native_menu = false,
   },
 
-  -- Select first candidate
-  completion = {
-    completeopt = "menuone, noinsert"
-  },
-
   -- Disable documentation
   documentation = false,
   -- documentation = {
   --   border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+  -- },
+
+  -- Select first candidate
+  -- completion = {
+  --   completeopt = "menuone, noinsert"
   -- },
 
   -- Disable cmp inside comment

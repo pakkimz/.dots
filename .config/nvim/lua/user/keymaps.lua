@@ -54,10 +54,6 @@ keymap("v", ">", ">gv", opts)
 keymap("n", "zl", "zL", opts)
 keymap("n", "zh", "zH", opts)
 
--- Map C-j as <tab> in command mode (see in :verbose cmap <tab>)
-keymap("c", "<C-j>", "<Cmd>call v:lua.cmp.utils.keymap.set_map(25)<CR>", opts)
-keymap("c", "<C-k>", "<Cmd>call v:lua.cmp.utils.keymap.set_map(16)<CR>", opts)
-
 -- Add one space
 keymap("n", "[s", "i<space><esc>l", opts)
 keymap("n", "]s", "a<space><esc>h", opts)
@@ -69,6 +65,10 @@ keymap("n", "<BS>", ":bprevious<CR>", opts)
 -- Easier scrolling when wrap
 keymap("n", "j", "v:count ? 'j' : 'gj'", exprs)
 keymap("n", "k", "v:count ? 'k' : 'gk'", exprs)
+
+-- Map C-j as C-n in wildmenumode
+keymap("c", "<c-j>", "wildmenumode() ? '<c-n>' : '<down>'", exprs)
+keymap("c", "<c-k>", "wildmenumode() ? '<c-p>' : '<up>'", exprs)
 
 -- Recall the command-line whose beginning matches the current command-line
 keymap("c", "<c-n>", "wildmenumode() ? '<c-n>' : '<down>'", exprs)

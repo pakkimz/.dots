@@ -123,14 +123,6 @@ keymap("n", "<leader>R", ":bw!<CR>", opts)
 keymap("n", "<leader>x", ":bp|bd #<CR>", opts)            -- Delete buffer without closing split
 keymap("n", "<leader>O", ":%bd!|e#|bd!#<CR>", opts)       -- Leave only one buffer
 
--- Clipboard
-keymap("n", "<C-c>", "\"+", optst)
-keymap("v", "<C-c>", "\"+yy`]", optst)
-keymap("v", "<C-x>", "\"+d", optst)
-keymap("n", "<C-x>", "\"+dd", optst)
-keymap("n", "<C-v>", "\"+p", optst)
-keymap("v", "<C-v>", "\"+p", optst)
-
 -- Ag
 keymap("n", "<leader>a", ":Ag!<space>", opts)
 keymap("n", "<leader>A", ":AgFile!<space>", opts)

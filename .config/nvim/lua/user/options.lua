@@ -1,5 +1,5 @@
 local options = {
-	clipboard = "unnamedplus",
+	-- clipboard = "unnamedplus",
 	termguicolors = true,
 	synmaxcol = 500,
 	regexpengine = 1,

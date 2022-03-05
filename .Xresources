@@ -18,6 +18,7 @@ xterm*dynamicColors: true
 ! Use a truetype font and size.
 ! *faceName: DejaVu Sans Mono:style=Book
 ! *faceName: DejaVuSansMono Nerd Font Mono:style=Bold
+! xterm*faceName: Inconsolata Regular Nerd Font Mono:style=Bold
 xterm*faceName: Hack Nerd Font Mono:style=Bold
 xterm*faceSize: 10
 xterm*renderFont: true

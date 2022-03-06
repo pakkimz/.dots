@@ -60,7 +60,7 @@ keymap("n", "]s", "a<space><esc>h", opts)
 
 -- Navigate buffers
 keymap("n", "<C-l>", ":bnext<CR>", opts)
-keymap("n", "<BS>", ":bprevious<CR>", opts)
+keymap("n", "<C-h>", ":bprevious<CR>", opts)
 
 -- Easier scrolling when wrap
 keymap("n", "j", "v:count ? 'j' : 'gj'", exprs)

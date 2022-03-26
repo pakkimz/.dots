@@ -31,7 +31,7 @@
 ; (setq-default mode-line-format nil)           ;; disable modeline
 
 (show-paren-mode t)                             ;; highlight match pair
-(global-display-line-numbers-mode)              ;; display number
+;; (global-display-line-numbers-mode)              ;; display number
 (diminish 'global-visual-line-mode t)           ;; line wrap
 (diminish 'eldoc-mode)
 

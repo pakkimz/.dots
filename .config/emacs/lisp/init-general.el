@@ -33,7 +33,8 @@
 (show-paren-mode t)                             ;; highlight match pair
 ;; (global-display-line-numbers-mode)              ;; display number
 (global-visual-line-mode t)                     ;; line wrap
-(diminish 'eldoc-mode)
+(diminish 'visual-line-mode)                    ;; hide 'wrap' in modeline
+(diminish 'eldoc-mode)                          ;; hide eldoc in modeline
 
 (setq-default tab-width 2)            ;; tab width
 (setq-default indent-tabs-mode nil)   ;; expandtab

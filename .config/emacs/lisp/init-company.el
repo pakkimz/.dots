@@ -31,6 +31,9 @@
                          )
              )
 
+; path completion
+(define-key global-map (kbd "C-.") 'company-files)
+
 (use-package yasnippet
              :diminish yas-minor-mode
              :init

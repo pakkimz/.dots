@@ -125,15 +125,17 @@ cmp.setup {
   },
 
   -- Disable documentation
-  documentation = false,
-  -- documentation = {
-  --   border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  -- },
+  window = {
+    documentation = false,
+    -- documentation = {
+    --   border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    -- },
+  },
 
   -- Select first candidate
-  -- completion = {
-  --   completeopt = "menuone, noinsert"
-  -- },
+  completion = {
+    completeopt = "menuone, noinsert"
+  },
 
   -- Disable cmp inside comment
   enabled = function()

@@ -47,9 +47,8 @@ return packer.startup(function(use)
 	use "windwp/nvim-autopairs" 	-- Autopairs, integrates with both cmp and treesitter
 	use "fedepujol/move.nvim"			-- Easily move line
   use "cappyzawa/trim.nvim"     -- Trims trailing whitespace
+  use "numToStr/Comment.nvim"   -- Easily comment stuff
   use 'norcalli/nvim-colorizer.lua'   -- Color higlighter
-
-  use {"numToStr/Comment.nvim", tag = 'v0.6'} 	-- Easily comment stuff
 
 	-- Nvim-tree
 	use 'kyazdani42/nvim-web-devicons'

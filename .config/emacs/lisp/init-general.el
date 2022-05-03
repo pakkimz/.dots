@@ -21,6 +21,9 @@
 ;; This stops emacs adding customised settings to init.el
 (setq custom-file (make-temp-file "emacs-custom"))
 
+;; Only show error warning
+(setq warning-minimum-level :error)
+
 ;; Transparency
 (set-frame-parameter (selected-frame) 'alpha '(95 95))
 (add-to-list 'default-frame-alist '(alpha 95 95))

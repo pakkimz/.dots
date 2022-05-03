@@ -23,7 +23,7 @@
                          ("C-k" . company-select-previous)
                          ("C-e" . company-abort)
                          ("C-w" . company-abort)
-                         ("C-SPC" . evil-force-normal-state)
+                         ("C-SPC" . (lambda () (interactive) (company-abort) (evil-force-normal-state)))  ;; one key two commands
                          ("C-y" . company-complete-selection)
                          ("<tab>" . company-complete-selection)
                          ; ("<return>" . nil)

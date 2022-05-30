@@ -141,3 +141,4 @@ keymap("n", "<F8>", ":TagbarToggle<CR>", optst)
 
 -- Nvimtree
 keymap("n", "<C-n>", ":NvimTreeToggle<cr>", optst)
+keymap("n", "<F2>", ":NvimTreeFindFile<CR>", optst)

@@ -1,3 +1,4 @@
 #!/bin/sh
 # exec /usr/bin/X -nolisten tcp -ardelay 400 -arinterval 25 "$@"
-exec /usr/bin/X -nolisten tcp -ardelay 300 -arinterval 33 "$@"
+# exec /usr/bin/X -nolisten tcp -ardelay 300 -arinterval 33 "$@"
+exec /usr/bin/X -nolisten tcp -ardelay 200 -arinterval 48 "$@"

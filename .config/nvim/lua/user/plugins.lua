@@ -74,7 +74,6 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	}
-	use "JoosepAlviste/nvim-ts-context-commentstring"
 
 	-- Vimscript plugins
 	use 'pakkimz/jellybeans.vim'

@@ -57,7 +57,7 @@ return packer.startup(function(use)
 	-- Cmp plugins
 	use "hrsh7th/nvim-cmp"				-- The completion plugin
 	use "hrsh7th/cmp-buffer"			-- Buffer completions
-	use "hrsh7th/cmp-path"				-- Path completions
+	-- use "hrsh7th/cmp-path"				-- Path completions
   use "hrsh7th/cmp-nvim-lsp"
 	use "saadparwaiz1/cmp_luasnip"-- Snippet completions
 

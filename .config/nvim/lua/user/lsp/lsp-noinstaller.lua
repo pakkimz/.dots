@@ -7,7 +7,7 @@ if not status_ok then
   return
 end
 
-local servers = { 'clangd', 'cssls', 'html', 'intelephense', 'jsonls', 'pyright', 'tsserver' }
+local servers = { 'clangd', 'cssls', 'html', 'intelephense', 'jsonls', 'pyright', 'tsserver', 'sumneko_lua' }
 
 for _, lsp in ipairs(servers) do
 
@@ -24,6 +24,11 @@ for _, lsp in ipairs(servers) do
   if lsp == "pyright" then
     local pyright_opts = require("user.lsp.settings.pyright")
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+  end
+
+  if lsp == "sumneko_lua" then
+    local sumneko_opts = require("user.lsp.settings.sumneko_lua")
+    opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
   end
 
   nvim_lsp[lsp].setup(opts)

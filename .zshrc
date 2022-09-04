@@ -111,3 +111,9 @@ source /usr/share/fzf/key-bindings.zsh
 export EDITOR=vim
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.config/bspwm/scripts/:$PATH"
+
+# lfcd command to use lf without leaving last direcotory
+LFCD="$HOME/.config/lf/lfcd.sh"
+if [ -f "$LFCD" ]; then
+    source "$LFCD"
+fi

@@ -31,6 +31,11 @@ for _, lsp in ipairs(servers) do
     opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
   end
 
+  if lsp == "intelephense" then
+    local intelephense = require("user.lsp.settings.intelephense")
+    opts = vim.tbl_deep_extend("force", intelephense, opts)
+  end
+
   nvim_lsp[lsp].setup(opts)
 
 end

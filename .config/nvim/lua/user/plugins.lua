@@ -96,6 +96,7 @@ return packer.startup(function(use)
   use 'rking/ag.vim'
   use {'majutsushi/tagbar', opt = true, cmd = {'TagbarToggle'}}
   use {'ivalkeen/vim-simpledb', ft = 'sql'}
+  use {'captbaritone/better-indent-support-for-php-with-html',  ft = 'php' }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
